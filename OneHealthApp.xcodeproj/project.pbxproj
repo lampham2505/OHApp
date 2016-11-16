@@ -28,6 +28,7 @@
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */; };
 		3AE79E171DD1D126009A2C3F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE79E161DD1D125009A2C3F /* InfoViewController.swift */; };
+		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		3ACFBD201DCD940D00157D97 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = NewsViewController/NewsViewController.swift; sourceTree = "<group>"; };
 		3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		3AE79E161DD1D125009A2C3F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = InfoViewController/InfoViewController.swift; sourceTree = "<group>"; };
+		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		3AC664471DCC60130001F8A5 /* Login/register */ = {
 			isa = PBXGroup;
 			children = (
+				84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */,
 			);
 			name = Login/register;
 			sourceTree = "<group>";
@@ -341,7 +344,7 @@
 				TargetAttributes = {
 					3A8E54BB1DCC1A730059EA2A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = XXU9UNW2WU;
+						DevelopmentTeam = B6EW6RYD29;
 						ProvisioningStyle = Automatic;
 					};
 					3A8E54CF1DCC1A760059EA2A = {
@@ -411,6 +414,7 @@
 				3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */,
 				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
+				84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */,
 				3AC664461DCC5F620001F8A5 /* TabbarHomeViewController.swift in Sources */,
 				3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */,
 				3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */,
@@ -573,10 +577,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XXU9UNW2WU;
+				DEVELOPMENT_TEAM = B6EW6RYD29;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OneHealth.OneHealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -586,10 +590,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XXU9UNW2WU;
+				DEVELOPMENT_TEAM = B6EW6RYD29;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OneHealth.OneHealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
