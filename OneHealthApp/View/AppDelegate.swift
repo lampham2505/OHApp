@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         // Override point for customization after application launch.
         //viet commit
         //new branch
+        APIManager.sharedInstance.
         return true
     }
 

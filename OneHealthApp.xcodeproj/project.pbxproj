@@ -11,6 +11,7 @@
 		3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550201DCC7BF2007B4E21 /* APIManager.swift */; };
 		3A5550231DCC8289007B4E21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550221DCC8289007B4E21 /* User.swift */; };
 		3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */; };
+		3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */; };
 		3A83C9831DD02DBE000329D3 /* SelectDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */; };
 		3A83C9851DD03737000329D3 /* DetailDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */; };
 		3A83C9881DD05981000329D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A83C9871DD05981000329D3 /* CoreLocation.framework */; };
@@ -53,6 +54,7 @@
 		3A5550201DCC7BF2007B4E21 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Controller/APIManager.swift; sourceTree = "<group>"; };
 		3A5550221DCC8289007B4E21 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectOnlineViewController.swift; path = ServiceOnline/SelectOnlineViewController.swift; sourceTree = "<group>"; };
+		3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "Login:Register/RegisterViewController.swift"; sourceTree = "<group>"; };
 		3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectDoctorViewController.swift; path = ServiceOnline/SelectDoctorViewController.swift; sourceTree = "<group>"; };
 		3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailDoctorViewController.swift; path = ServiceOnline/DetailDoctorViewController.swift; sourceTree = "<group>"; };
 		3A83C9871DD05981000329D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */,
+				3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */,
 			);
 			name = Login/register;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */,
 				3A5550231DCC8289007B4E21 /* User.swift in Sources */,
 				3A8E54F91DCC314D0059EA2A /* ServiceTableViewCell.swift in Sources */,
+				3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */,
 				3AE79E171DD1D126009A2C3F /* InfoViewController.swift in Sources */,
 				3A8E54F31DCC1BCB0059EA2A /* AppDelegate.swift in Sources */,
 				3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */,

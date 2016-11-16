@@ -9,8 +9,13 @@
 import UIKit
 
 class APIManager: NSObject {
-    static let sharedInstance:APIManager = APIManager()
-    override init() {
-        
+    var baseUrl:String!
+    static let sharedInstance:APIManager = {
+        let instance = APIManager()
+        instance.baseUrl = "abc"
+        return instance
+    }()
+    func dosome(){
+        print("ok single")
     }
 }
