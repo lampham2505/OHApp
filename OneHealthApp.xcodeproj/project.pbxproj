@@ -11,7 +11,14 @@
 		3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550201DCC7BF2007B4E21 /* APIManager.swift */; };
 		3A5550231DCC8289007B4E21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550221DCC8289007B4E21 /* User.swift */; };
 		3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */; };
+		3A771D821DDD49D000634FB3 /* APIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D7F1DDD49D000634FB3 /* APIError.m */; };
+		3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D841DDD550C00634FB3 /* APIHelper.swift */; };
 		3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */; };
+		3A7A0A481DDC07B90088C267 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A471DDC07B90088C267 /* SWRevealViewController.m */; };
+		3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A491DDC0E2D0088C267 /* RearViewController.swift */; };
+		3A7A0A4D1DDC3ABF0088C267 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A4C1DDC3ABF0088C267 /* InfoViewController.swift */; };
+		3A7A0A4F1DDC4A510088C267 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A4E1DDC4A510088C267 /* ChatViewController.swift */; };
+		3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A501DDC5BAE0088C267 /* UserController.swift */; };
 		3A83C9831DD02DBE000329D3 /* SelectDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */; };
 		3A83C9851DD03737000329D3 /* DetailDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */; };
 		3A83C9881DD05981000329D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A83C9871DD05981000329D3 /* CoreLocation.framework */; };
@@ -28,8 +35,8 @@
 		3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664491DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift */; };
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */; };
-		3AE79E171DD1D126009A2C3F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE79E161DD1D125009A2C3F /* InfoViewController.swift */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
+		EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +61,17 @@
 		3A5550201DCC7BF2007B4E21 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Controller/APIManager.swift; sourceTree = "<group>"; };
 		3A5550221DCC8289007B4E21 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectOnlineViewController.swift; path = ServiceOnline/SelectOnlineViewController.swift; sourceTree = "<group>"; };
+		3A771D7E1DDD49D000634FB3 /* APIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIError.h; path = "Controller/Lib Error/APIError.h"; sourceTree = "<group>"; };
+		3A771D7F1DDD49D000634FB3 /* APIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIError.m; path = "Controller/Lib Error/APIError.m"; sourceTree = "<group>"; };
+		3A771D841DDD550C00634FB3 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIHelper.swift; path = "Controller/Lib Error/APIHelper.swift"; sourceTree = "<group>"; };
 		3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "Login:Register/RegisterViewController.swift"; sourceTree = "<group>"; };
+		3A7A0A461DDC07B90088C267 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3A7A0A471DDC07B90088C267 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3A7A0A491DDC0E2D0088C267 /* RearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RearViewController.swift; path = RearViewController/RearViewController.swift; sourceTree = "<group>"; };
+		3A7A0A4B1DDC0F1B0088C267 /* OneHealthApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneHealthApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A7A0A4C1DDC3ABF0088C267 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = InfoViewController/InfoViewController.swift; sourceTree = "<group>"; };
+		3A7A0A4E1DDC4A510088C267 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = ServiceOnline/ChatViewController.swift; sourceTree = "<group>"; };
+		3A7A0A501DDC5BAE0088C267 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = Controller/UserController.swift; sourceTree = "<group>"; };
 		3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectDoctorViewController.swift; path = ServiceOnline/SelectDoctorViewController.swift; sourceTree = "<group>"; };
 		3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailDoctorViewController.swift; path = ServiceOnline/DetailDoctorViewController.swift; sourceTree = "<group>"; };
 		3A83C9871DD05981000329D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -77,8 +94,10 @@
 		3AC664491DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceMedicalExaminationViewController.swift; path = "Service medical examination/ServiceMedicalExaminationViewController.swift"; sourceTree = "<group>"; };
 		3ACFBD201DCD940D00157D97 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = NewsViewController/NewsViewController.swift; sourceTree = "<group>"; };
 		3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
-		3AE79E161DD1D125009A2C3F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = InfoViewController/InfoViewController.swift; sourceTree = "<group>"; };
+		6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneHealthApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
+		C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.release.xcconfig"; sourceTree = "<group>"; };
+		CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +107,7 @@
 			files = (
 				3A83C98A1DD059D4000329D3 /* MapKit.framework in Frameworks */,
 				3A83C9881DD05981000329D3 /* CoreLocation.framework in Frameworks */,
+				EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,11 +128,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A771D771DDD425900634FB3 /* Lib Error */ = {
+			isa = PBXGroup;
+			children = (
+				3A771D7E1DDD49D000634FB3 /* APIError.h */,
+				3A771D7F1DDD49D000634FB3 /* APIError.m */,
+				3A771D841DDD550C00634FB3 /* APIHelper.swift */,
+			);
+			name = "Lib Error";
+			sourceTree = "<group>";
+		};
+		3A7A0A441DDC06D00088C267 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3A7A0A451DDC07B90088C267 /* SWRevealViewController */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3A7A0A451DDC07B90088C267 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A7A0A461DDC07B90088C267 /* SWRevealViewController.h */,
+				3A7A0A471DDC07B90088C267 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		3A83C9861DD05981000329D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3A83C9891DD059D4000329D3 /* MapKit.framework */,
 				3A83C9871DD05981000329D3 /* CoreLocation.framework */,
+				6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +173,7 @@
 				3A8E54DE1DCC1A760059EA2A /* OneHealthAppUITests */,
 				3A8E54BD1DCC1A740059EA2A /* Products */,
 				3A83C9861DD05981000329D3 /* Frameworks */,
+				4F8BA3F06A06E4E1FAB70FE7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,11 +192,13 @@
 			children = (
 				3A8E54ED1DCC1AD00059EA2A /* Controller */,
 				3A8E54EF1DCC1AE80059EA2A /* Model */,
+				3A7A0A441DDC06D00088C267 /* Lib */,
 				3A8E54F01DCC1BCB0059EA2A /* View */,
 				3A8E54C31DCC1A750059EA2A /* Main.storyboard */,
 				3A8E54C61DCC1A750059EA2A /* Assets.xcassets */,
 				3A8E54C81DCC1A750059EA2A /* LaunchScreen.storyboard */,
 				3A8E54CB1DCC1A750059EA2A /* Info.plist */,
+				3A7A0A4B1DDC0F1B0088C267 /* OneHealthApp-Bridging-Header.h */,
 			);
 			path = OneHealthApp;
 			sourceTree = "<group>";
@@ -174,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				3A5550201DCC7BF2007B4E21 /* APIManager.swift */,
+				3A7A0A501DDC5BAE0088C267 /* UserController.swift */,
+				3A771D771DDD425900634FB3 /* Lib Error */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -193,9 +246,9 @@
 				3AC664451DCC5F620001F8A5 /* TabbarHomeViewController.swift */,
 				3A8E54F51DCC2A620059EA2A /* ServiceViewController */,
 				3ACFBD1F1DCD937700157D97 /* NewsViewController */,
-				3AE79E131DD1A586009A2C3F /* SearchViewController */,
+				3AE79E131DD1A586009A2C3F /* InfoViewController */,
 				3AE79E141DD1A5DA009A2C3F /* NotificationViewController */,
-				3AE79E151DD1A5E4009A2C3F /* InfoViewController */,
+				3AE79E151DD1A5E4009A2C3F /* RearViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +289,7 @@
 				3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */,
 				3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */,
 				3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */,
+				3A7A0A4E1DDC4A510088C267 /* ChatViewController.swift */,
 			);
 			name = ServiceOnline;
 			sourceTree = "<group>";
@@ -257,11 +311,12 @@
 			name = NewsViewController;
 			sourceTree = "<group>";
 		};
-		3AE79E131DD1A586009A2C3F /* SearchViewController */ = {
+		3AE79E131DD1A586009A2C3F /* InfoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3A7A0A4C1DDC3ABF0088C267 /* InfoViewController.swift */,
 			);
-			name = SearchViewController;
+			name = InfoViewController;
 			sourceTree = "<group>";
 		};
 		3AE79E141DD1A5DA009A2C3F /* NotificationViewController */ = {
@@ -271,12 +326,21 @@
 			name = NotificationViewController;
 			sourceTree = "<group>";
 		};
-		3AE79E151DD1A5E4009A2C3F /* InfoViewController */ = {
+		3AE79E151DD1A5E4009A2C3F /* RearViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3AE79E161DD1D125009A2C3F /* InfoViewController.swift */,
+				3A7A0A491DDC0E2D0088C267 /* RearViewController.swift */,
 			);
-			name = InfoViewController;
+			name = RearViewController;
+			sourceTree = "<group>";
+		};
+		4F8BA3F06A06E4E1FAB70FE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */,
+				C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +350,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A8E54E41DCC1A760059EA2A /* Build configuration list for PBXNativeTarget "OneHealthApp" */;
 			buildPhases = (
+				C20B0ACD405FE548053D6F3F /* [CP] Check Pods Manifest.lock */,
 				3A8E54B81DCC1A730059EA2A /* Sources */,
 				3A8E54B91DCC1A730059EA2A /* Frameworks */,
 				3A8E54BA1DCC1A730059EA2A /* Resources */,
+				8A8C6ADB817DAF59B8CFE3E0 /* [CP] Embed Pods Frameworks */,
+				D47F90EF11C4986C2475ACDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,7 +414,7 @@
 				TargetAttributes = {
 					3A8E54BB1DCC1A730059EA2A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = B6EW6RYD29;
+						DevelopmentTeam = XXU9UNW2WU;
 						ProvisioningStyle = Automatic;
 					};
 					3A8E54CF1DCC1A760059EA2A = {
@@ -409,24 +476,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A8C6ADB817DAF59B8CFE3E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C20B0ACD405FE548053D6F3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D47F90EF11C4986C2475ACDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A8E54B81DCC1A730059EA2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */,
+				3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */,
+				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
 				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
+				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
+				3A7A0A4D1DDC3ABF0088C267 /* InfoViewController.swift in Sources */,
 				84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */,
 				3AC664461DCC5F620001F8A5 /* TabbarHomeViewController.swift in Sources */,
 				3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */,
 				3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */,
 				3A83C9831DD02DBE000329D3 /* SelectDoctorViewController.swift in Sources */,
 				3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */,
+				3A7A0A4F1DDC4A510088C267 /* ChatViewController.swift in Sources */,
 				3A5550231DCC8289007B4E21 /* User.swift in Sources */,
 				3A8E54F91DCC314D0059EA2A /* ServiceTableViewCell.swift in Sources */,
+				3A7A0A481DDC07B90088C267 /* SWRevealViewController.m in Sources */,
+				3A771D821DDD49D000634FB3 /* APIError.m in Sources */,
 				3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */,
-				3AE79E171DD1D126009A2C3F /* InfoViewController.swift in Sources */,
 				3A8E54F31DCC1BCB0059EA2A /* AppDelegate.swift in Sources */,
 				3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */,
 				3A83C9851DD03737000329D3 /* DetailDoctorViewController.swift in Sources */,
@@ -579,26 +700,30 @@
 		};
 		3A8E54E51DCC1A760059EA2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B6EW6RYD29;
+				DEVELOPMENT_TEAM = XXU9UNW2WU;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneHealthApp/OneHealthApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3A8E54E61DCC1A760059EA2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B6EW6RYD29;
+				DEVELOPMENT_TEAM = XXU9UNW2WU;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneHealthApp/OneHealthApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

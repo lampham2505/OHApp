@@ -30,31 +30,16 @@ class LoginViewController: UIViewController {
     @IBAction func btnLoginTapped(_ sender: AnyObject) {
         let username = txtfUser.text
         let password = txtfPassword.text
-        loginAPI(username: username!, password: password!) {_ in 
-            //
-        }
+        APIManager.sharedInstance.loginUser(username: username!, password: password!, completion:{ (user: User?,error:APIError?) in
+            if error == nil {
+                print(user?.UserId ?? "")
+            }else{
+                print(error?.errorMessage ?? "")
+            }
+        })
     }
     
     //MARK: Login API
-    func loginAPI(username: String, password: String, completion:(_ result: String) -> Void) {
-        let data = "Email=\(username)&Password=\(password)".data(using: .utf8)
-        let url:URL = URL(string: "http://localhost/webservice/LoginUser.php")!
-        let request = NSMutableURLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-        let session = URLSession.shared
-        request.httpMethod = "POST"
-        request.httpBody = data
-        //        request.allHTTPHeaderFields = headers
-        let dataTask = session.dataTask(with: request as URLRequest) { (data, res, error) in
-            if data != nil {
-                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print(json)
-                if let response = res as? HTTPURLResponse , 200...299 ~= response.statusCode {
-                } else {
-                    
-                }
-            }
-        }
-        dataTask.resume()
-    }
+    
 
 }

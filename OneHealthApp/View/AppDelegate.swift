@@ -9,17 +9,24 @@
 import UIKit
 import CoreLocation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,SWRevealViewControllerDelegate {
 
     var window: UIWindow?
+    var viewController:SWRevealViewController?
     var locationManager:CLLocationManager?
     var cordinate:CLLocationCoordinate2D?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //viet commit
-        //new branch
-        APIManager.sharedInstance.
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        let frontViewController:TabbarHomeViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarHomeViewController") as! TabbarHomeViewController
+        let rearViewController:RearViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RearViewController") as! RearViewController
+        let navigation:UINavigationController = UINavigationController.init(rootViewController: frontViewController)
+        navigation.navigationBar.barTintColor = UIColor.green
+        let revealController:SWRevealViewController = SWRevealViewController.init(rearViewController: rearViewController, frontViewController: navigation)
+        revealController.delegate = self
+        self.viewController = revealController
+        self.window?.rootViewController = self.viewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

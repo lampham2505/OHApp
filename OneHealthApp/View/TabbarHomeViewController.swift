@@ -12,7 +12,15 @@ class TabbarHomeViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 2
+//        UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+//            style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+        let revealController:SWRevealViewController = self.revealViewController()
+        revealController.panGestureRecognizer()
+        revealController.tapGestureRecognizer()
+        let img:UIImage = UIImage(named: "reveal-icon")!
+        let revealButtonItem = UIBarButtonItem.init(image: img, style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem = revealButtonItem
+//        self.selectedIndex = 2
     }
 
     override func didReceiveMemoryWarning() {
