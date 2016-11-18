@@ -9,7 +9,7 @@
 import UIKit
 
 class APIHelper: NSObject {
-   static func processDataResponse(data:Data,urlresponse:URLResponse?,error:NSError?,complete:@escaping(_ json:NSDictionary?,_ error:APIError?)->()){
+   static func processDataResponseOnlyMessage(data:Data,urlresponse:URLResponse?,error:NSError?,complete:@escaping(_ json:NSDictionary?,_ error:APIError?)->()){
         let httpResponse:HTTPURLResponse? = urlresponse as? HTTPURLResponse
         var _statusError:APIError? = nil
         if httpResponse != nil {

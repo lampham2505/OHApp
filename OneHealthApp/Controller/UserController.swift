@@ -19,7 +19,7 @@ class UserController: NSObject {
         let postString = "Mobile=\(username)&Password=\(password)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponse(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
                 completion(json, error)
             })
         }
@@ -31,19 +31,19 @@ class UserController: NSObject {
         let postString = "Name=\(name)&Password=\(password)&Email=\(email)&Mobile=\(mobile)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponse(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
                 completion(json, error)
             })
         }
         task.resume()
     }
-    func APIActiveUser(passcode: Int, completion: @escaping (_ data: NSDictionary?,_ error:APIError?) -> ()) {
+    func APIActiveUser(userID: String,passcode: String, token: String, completion: @escaping (_ data: NSDictionary?,_ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)isActive.php")!)
         request.httpMethod = "POST"
-        let postString = "passcode=\(passcode)"
+        let postString = "UserID=\(userID)&passcode=\(passcode)&Token=\(token)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponse(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data!, urlresponse: response, error: error as NSError?, complete: { (json, error) in
                 completion(json, error)
             })
         }

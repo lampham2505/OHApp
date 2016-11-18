@@ -18,7 +18,7 @@ class APIManager: NSObject {
     func userBussiness() -> UserController{
         return UserController.init(baseURL: baseUrl)
     }
-    func loginUser(username:String,password:String, completion: @escaping (_ user: User?,_ error:APIError?) -> ()){
+    func loginUser(username:String, password:String, completion: @escaping (_ user: User?,_ error:APIError?) -> ()){
         self.userBussiness().APILoginUser(username: username,password:password, completion:{ (data:NSDictionary?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
@@ -42,6 +42,16 @@ class APIManager: NSObject {
             }
         })
     }
-
+    func activeUser(userID: String,passcode: String, token: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
+        self.userBussiness().APIActiveUser(userID: userID,passcode: passcode, token: token, completion:{ (data:NSDictionary?,error:APIError?) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    completion(data?["EMStatusCode"] as! Int, error)
+                }else{
+                    completion(0, error)
+                }
+            }
+        })
+    }
 
 }
