@@ -36,6 +36,8 @@
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
+		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
+		84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */; };
 		EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,9 @@
 		3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneHealthApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
+		847B58BF1DDEB286008A35F5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		847B58C01DDEB286008A35F5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = NotificationViewController/NotificationViewController.swift; sourceTree = "<group>"; };
 		C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +146,7 @@
 		3A7A0A441DDC06D00088C267 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				847B58BE1DDEB286008A35F5 /* Utils */,
 				3A7A0A451DDC07B90088C267 /* SWRevealViewController */,
 			);
 			path = Lib;
@@ -322,6 +328,7 @@
 		3AE79E141DD1A5DA009A2C3F /* NotificationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */,
 			);
 			name = NotificationViewController;
 			sourceTree = "<group>";
@@ -341,6 +348,15 @@
 				C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		847B58BE1DDEB286008A35F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				847B58BF1DDEB286008A35F5 /* Utils.h */,
+				847B58C01DDEB286008A35F5 /* Utils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +547,7 @@
 			files = (
 				3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */,
 				3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */,
+				84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */,
 				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
 				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
 				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
@@ -550,6 +567,7 @@
 				3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */,
 				3A8E54F31DCC1BCB0059EA2A /* AppDelegate.swift in Sources */,
 				3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */,
+				847B58C11DDEB286008A35F5 /* Utils.m in Sources */,
 				3A83C9851DD03737000329D3 /* DetailDoctorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

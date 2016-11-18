@@ -18,10 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        
         let frontViewController:TabbarHomeViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarHomeViewController") as! TabbarHomeViewController
+        
         let rearViewController:RearViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RearViewController") as! RearViewController
         let navigation:UINavigationController = UINavigationController.init(rootViewController: frontViewController)
         navigation.navigationBar.barTintColor = UIColor.green
+        navigation.navigationBar.isHidden = true
         let revealController:SWRevealViewController = SWRevealViewController.init(rearViewController: rearViewController, frontViewController: navigation)
         revealController.delegate = self
         self.viewController = revealController

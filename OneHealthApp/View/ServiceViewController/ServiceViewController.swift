@@ -12,12 +12,24 @@ class ServiceViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     @IBOutlet var myTable: UITableView!
     var arrTitle:[String] = ["Dịch vụ đặt lịch khám bệnh tại nhà","Dịch vụ tư vấn online","tin tức đặt câu hỏi tư vấn"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.delegate = self
         myTable.dataSource = self
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        settingNavBar()
+    }
+    func settingNavBar() {
+        let revealController:SWRevealViewController = self.revealViewController()
+        revealController.panGestureRecognizer()
+        revealController.tapGestureRecognizer()
+        let img:UIImage = UIImage(named: "reveal-icon")!
+        let revealButtonItem = UIBarButtonItem.init(image: img, style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem = revealButtonItem
+    }
     //TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrTitle.count

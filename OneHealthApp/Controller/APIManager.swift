@@ -30,6 +30,18 @@ class APIManager: NSObject {
         })
     }
     func parseUser(){
-        
     }
+    func registerUser(name: String, password: String, email: String,  mobile: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
+        self.userBussiness().APIRegisterUser(name: name, password: password, email: email, mobile: mobile, completion:{ (data:NSDictionary?,error:APIError?) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    completion(data?["EMStatusCode"] as! Int, error)
+                }else{
+                    completion(0, error)
+                }
+            }
+        })
+    }
+
+
 }

@@ -16,4 +16,5 @@
 #import <JSQMessagesViewController/JSQMessagesAvatarImageFactory.h>
 #import <JSQMessagesViewController/JSQMessagesToolbarButtonFactory.h>
 #import "APIError.h"
+#import "Utils.h"
 #endif /* OneHealthApp_Bridging_Header_h */

@@ -15,10 +15,17 @@ class InfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        settingNavBar()
+    }
+    func settingNavBar() {
+        let revealController:SWRevealViewController = self.revealViewController()
+        revealController.panGestureRecognizer()
+        revealController.tapGestureRecognizer()
+        let img:UIImage = UIImage(named: "reveal-icon")!
+        let revealButtonItem = UIBarButtonItem.init(image: img, style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem = revealButtonItem
     }
     
 
