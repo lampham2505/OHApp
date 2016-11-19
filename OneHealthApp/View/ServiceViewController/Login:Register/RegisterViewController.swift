@@ -27,13 +27,14 @@ class RegisterViewController: UIViewController {
     //MARK: - IBAction
     @IBAction func btnRegisterAction(_ sender: AnyObject) {
         //check the value of text field
-        if (((txtfName.text?.isEmpty)! || (txtfMobile.text?.isEmpty)! || (txtfEmail.text?.isEmpty)!)){
+        if (((txtfName.text?.isEmpty)! || (txtfMobile.text?.isEmpty)! || (txtfEmail.text?.isEmpty)!) || (txtfEmail.text?.isEmpty)!){
             let _statusError = APIError.init(reason: "Bạn phải nhập đầy đủ thông tin", andCode: 0)
             Utils.show(_statusError)
-        } else {
-           self.register(name: txtfName.text!, password: txtfPassword.text!, email: txtfEmail.text!, mobile:(txtfMobile.text!))
+        } else if (txtfPassword.text != txtfPasswordConfirm.text){
+                    let _statusError = APIError.init(reason: "Mật khẩu nhập lại không đúng", andCode: 0)
+                    Utils.show(_statusError)
+                }else {self.register(name: txtfName.text!, password: txtfPassword.text!, email: txtfEmail.text!, mobile:(txtfMobile.text!))
         }
-        
     }
     //MARK: Call API
     func register(name: String, password: String, email: String, mobile: String) {
@@ -68,8 +69,6 @@ class RegisterViewController: UIViewController {
     func alertView() -> UIAlertController{
         let registerCodeAlert = UIAlertController(title: "Nhập mã xác thực", message: "Một mã xác thực đã được gửi đến số điện thoại của bạn dưới dạng tin nhắn, hãy nhập nó vào ô bên dưới", preferredStyle: .alert)
             registerCodeAlert.addTextField { (textField : UITextField!) -> Void in
-                let cancelAction = UIAlertAction(title: "Để sau", style: .cancel, handler: {(registerCodeAlert) -> Void in()
-                })
             }
         let firstTextField = registerCodeAlert.textFields![0] as UITextField
         firstTextField.placeholder = "Mã xác thực"

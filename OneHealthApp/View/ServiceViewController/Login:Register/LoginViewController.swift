@@ -26,20 +26,24 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: LoginButtonAction
+    //MARK: IBAction
     @IBAction func btnLoginTapped(_ sender: AnyObject) {
         let username = txtfUser.text
         let password = txtfPassword.text
-        APIManager.sharedInstance.loginUser(username: username!, password: password!, completion:{ (user: User?,error:APIError?) in
-            if error == nil {
-                print(user?.UserId ?? "")
-            }else{
-                print(error?.errorMessage ?? "")
-            }
-        })
+        if ((username?.isEmpty)! && (password?.isEmpty)!) {
+            let _statusError = APIError.init(reason: "Bạn phải nhập đầy đủ thông tin", andCode: 0)
+            Utils.show(_statusError)
+        } else {
+            APIManager.sharedInstance.loginUser(username: username!, password: password!,   completion:{ (user: User?,error:APIError?) in
+                if error == nil {
+                    print(user?.UserId ?? "")
+                }else{
+                    print(error?.errorMessage ?? "")
+                }
+            })
+        }
     }
-    
-    //MARK: Login API
-    
-
+    @IBAction func btnLoginDismissAction(_ sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
 }
