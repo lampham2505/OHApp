@@ -22,22 +22,27 @@ class APIManager: NSObject {
         self.userBussiness().APILoginUser(username: username,password:password, completion:{ (data:NSDictionary?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
-                    
+                    if let _ = data{
+                        completion(self.parseUser(data: data!),nil)
+                    }
                 }else{
                     completion(nil, error)
                 }
             }
         })
     }
-    func parseUser(){
+    func parseUser(data:NSDictionary)->User{
+        let user:User = User.init()
+        user.UserId = data["UserId"] as! String
+        return user
     }
     func registerUser(name: String, password: String, email: String,  mobile: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
         self.userBussiness().APIRegisterUser(name: name, password: password, email: email, mobile: mobile, completion:{ (data:NSDictionary?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
-                    completion(data?["EMStatusCode"] as! Int, error)
+                    completion(data?[key_status_error] as! Int, error)
                 }else{
-                    completion(0, error)
+                    completion(Int(status_code_failed), error)
                 }
             }
         })
@@ -46,9 +51,9 @@ class APIManager: NSObject {
         self.userBussiness().APIActiveUser(userID: userID,passcode: passcode, token: token, completion:{ (data:NSDictionary?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
-                    completion(data?["EMStatusCode"] as! Int, error)
+                    completion(data?[key_status_error] as! Int, error)
                 }else{
-                    completion(0, error)
+                    completion(Int(status_code_failed), error)
                 }
             }
         })

@@ -9,7 +9,7 @@
 import UIKit
 
 class APIHelper: NSObject {
-   static func processDataResponseOnlyMessage(data:Data,urlresponse:URLResponse?,error:NSError?,complete:@escaping(_ json:NSDictionary?,_ error:APIError?)->()){
+    static func processDataResponseOnlyMessage(data:Data,urlresponse:URLResponse?,error:NSError?,keyList:String,complete:@escaping(_ json:NSDictionary?,_ error:APIError?)->()){
         let httpResponse:HTTPURLResponse? = urlresponse as? HTTPURLResponse
         var _statusError:APIError? = nil
         if httpResponse != nil {
@@ -26,14 +26,18 @@ class APIHelper: NSObject {
             }else{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data as Data, options: []) as! [String:Any]
-                    if json["EMStatusCode"] as! Int == 1 {
-                        complete(json as NSDictionary?, nil)
+                    if json[key_status_error] as! Int == Int(status_code_success) {
+                        if keyList == "" {
+                            complete(json as NSDictionary?, nil)
+                        }else{
+                            complete(json[keyList] as! NSDictionary?,nil)
+                        }
                     }else{
-                        _statusError = APIError.init(reason: json["Message"] as! String!, andCode: 0)
+                        _statusError = APIError.init(reason: json[key_status_message] as! String!, andCode: Int(status_code_failed))
                         complete(nil, _statusError)
                     }
                 }catch{
-                    _statusError = APIError.init(reason: "fail json", andCode: 0)
+                    _statusError = APIError.init(reason: "fail json", andCode: Int(status_code_failed))
                     complete(nil, _statusError)
                 }
                 

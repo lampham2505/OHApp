@@ -11,12 +11,12 @@
 @implementation APIError
 
 
-/**
+/*
  * Initialization
  * @param	reason	The reason for the error
  * @param	code	The HTTP response code from the API request
  * @param	data	The Raw HTTP response data from the API request
- */
+*/
 - (APIError*) initWithReason: (NSString*) reason
                      andCode: (NSInteger) code
                      
