@@ -36,6 +36,7 @@
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */; };
 		84329DC21DDFEFE8004F4C6F /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329DC11DDFEFE8004F4C6F /* CheckBox.swift */; };
+		84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329DC31DE0042A004F4C6F /* ActiveViewController.swift */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
 		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
 		84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */; };
@@ -99,6 +100,7 @@
 		3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneHealthApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84329DC11DDFEFE8004F4C6F /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		84329DC31DE0042A004F4C6F /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveViewController.swift; path = "Login:Register/ActiveViewController.swift"; sourceTree = "<group>"; };
 		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
 		847B58BF1DDEB286008A35F5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		847B58C01DDEB286008A35F5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */,
 				3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */,
+				84329DC31DE0042A004F4C6F /* ActiveViewController.swift */,
 			);
 			name = Login/register;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
 				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
+				84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */,
 				3A7A0A4D1DDC3ABF0088C267 /* InfoViewController.swift in Sources */,
 				84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */,
 				3AC664461DCC5F620001F8A5 /* TabbarHomeViewController.swift in Sources */,

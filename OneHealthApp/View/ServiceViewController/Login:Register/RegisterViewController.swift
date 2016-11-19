@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
         APIManager.sharedInstance.registerUser(name: name, password: password, email: email, mobile: mobile) { (_ status:Int,_ error:APIError?) in
             if error == nil {
                 self.login(username: self.txtfMobile.text!, password: self.txtfPassword.text!)
-                self.present((self.alertView()), animated: true)
+                self.pushToActiveVC()
             } else {
                 Utils.show(error)
             }
@@ -56,7 +56,7 @@ class RegisterViewController: UIViewController {
         APIManager.sharedInstance.loginUser(username: self.txtfMobile.text!, password: self.txtfPassword.text!, completion: { (user, error) in
             if error == nil {
                 
-                self.present((self.alertView()), animated: true)
+                self.pushToActiveVC()
             } else {
                 Utils.show(error)
             }
@@ -65,28 +65,31 @@ class RegisterViewController: UIViewController {
     func activeUserAlert(userID: String, passcode: String, token: String) {
         APIManager.sharedInstance.activeUser(userID: userID, passcode: passcode, token: token) { (_ status:Int,_ error:APIError?) in
             if error == nil {
-                self.present((self.alertView()), animated: true)
+                self.pushToActiveVC()
             } else {
                 Utils.show(error)
             }
         }
     }
-    func alertView() -> UIAlertController{
-        let registerCodeAlert = UIAlertController(title: "Nhập mã xác thực", message: "Một mã xác thực đã được gửi đến số điện thoại của bạn dưới dạng tin nhắn, hãy nhập nó vào ô bên dưới", preferredStyle: .alert)
-            registerCodeAlert.addTextField { (textField : UITextField!) -> Void in
-            }
-        let firstTextField = registerCodeAlert.textFields![0] as UITextField
-        firstTextField.placeholder = "Mã xác thực"
-        firstTextField.layer.cornerRadius = 20.0
-        let registerAction = UIAlertAction(title: "Đăng ký", style: .default, handler: {(registerCodeAlert) -> Void in()
-            if (firstTextField.text?.isEmpty)! {
-                return
-            }else {
-                self.activeUserAlert(userID: "", passcode: "", token: "")
-            }
-        })
-        registerCodeAlert.addAction(registerAction)
-        return registerCodeAlert
+    func pushToActiveVC() {
+        self.navigationController?.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "ActiveViewController") as UIViewController, animated: true)
     }
+//    func alertView() -> UIAlertController{
+//        let registerCodeAlert = UIAlertController(title: "Nhập mã xác thực", message: "Một mã xác thực đã được gửi đến số điện thoại của bạn dưới dạng tin nhắn, hãy nhập nó vào ô bên dưới", preferredStyle: .alert)
+//            registerCodeAlert.addTextField { (textField : UITextField!) -> Void in
+//            }
+//        let firstTextField = registerCodeAlert.textFields![0] as UITextField
+//        firstTextField.placeholder = "Mã xác thực"
+//        firstTextField.layer.cornerRadius = 20.0
+//        let registerAction = UIAlertAction(title: "Đăng ký", style: .default, handler: {(registerCodeAlert) -> Void in()
+//            if (firstTextField.text?.isEmpty)! {
+//                return
+//            }else {
+//                self.activeUserAlert(userID: "", passcode: "", token: "")
+//            }
+//        })
+//        registerCodeAlert.addAction(registerAction)
+//        return registerCodeAlert
+//    }
     
 }
