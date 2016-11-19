@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var bShowPassword:Bool = false
     
     @IBOutlet weak var txtfUser: UITextField!
     @IBOutlet weak var txtfPassword: UITextField!
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController {
             APIManager.sharedInstance.loginUser(username: username!, password: password!,   completion:{ (user: User?,error:APIError?) in
                 if error == nil {
                     print(user?.UserId ?? "")
+                    self.dismiss(animated: true, completion: {})
                 }else{
                     print(error?.errorMessage ?? "")
                 }
@@ -45,5 +47,9 @@ class LoginViewController: UIViewController {
     }
     @IBAction func btnLoginDismissAction(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: {})
+    }
+    @IBAction func btnCheckBoxAction(_ sender: AnyObject) {
+        bShowPassword = !bShowPassword
+        txtfPassword.isSecureTextEntry = !bShowPassword
     }
 }

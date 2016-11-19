@@ -9,15 +9,14 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    var bShowPassword:Bool = false
 
     @IBOutlet weak var txtfName: UITextField!
     @IBOutlet weak var txtfPassword: UITextField!
     @IBOutlet weak var txtfPasswordConfirm: UITextField!
     @IBOutlet weak var txtfEmail: UITextField!
     @IBOutlet weak var txtfMobile: UITextField!
-    
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +35,12 @@ class RegisterViewController: UIViewController {
                 }else {self.register(name: txtfName.text!, password: txtfPassword.text!, email: txtfEmail.text!, mobile:(txtfMobile.text!))
         }
     }
+    @IBAction func btnCheckBoxAction(_ sender: AnyObject) {
+        bShowPassword = !bShowPassword
+        txtfPassword.isSecureTextEntry = !bShowPassword
+        txtfPasswordConfirm.isSecureTextEntry = !bShowPassword
+    }
+   
     //MARK: Call API
     func register(name: String, password: String, email: String, mobile: String) {
         APIManager.sharedInstance.registerUser(name: name, password: password, email: email, mobile: mobile) { (_ status:Int,_ error:APIError?) in

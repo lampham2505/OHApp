@@ -212,12 +212,12 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-cZ-w9a">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Xác nhận mật khẩu (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Yc-vvY">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijv-Id-cBC">
                                                         <nil key="textColor"/>
@@ -230,36 +230,56 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5w-xB-TxS">
-                                                        <frame key="frameInset" minX="40" minY="451" width="295" height="30"/>
+                                                        <frame key="frameInset" minX="87" minY="408" width="200" height="30"/>
                                                         <state key="normal" title="Đăng ký"/>
                                                         <connections>
                                                             <action selector="btnRegisterAction:" destination="IjY-zg-xm9" eventType="touchUpInside" id="fQR-2h-VnA"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-bk-BGd" customClass="CheckBox" customModule="OneHealthApp" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="3W8-LH-9NS"/>
+                                                            <constraint firstAttribute="width" constant="20" id="CBm-vv-Cw3"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="checkbox-unchecked"/>
+                                                        <connections>
+                                                            <action selector="btnCheckBoxAction:" destination="IjY-zg-xm9" eventType="touchUpInside" id="NcS-6B-e1d"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiển thị mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JA-xJ-O0g">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="ijv-Id-cBC" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="1Yx-nW-ekP"/>
-                                                    <constraint firstItem="qdc-Yc-vvY" firstAttribute="top" secondItem="B1v-cZ-w9a" secondAttribute="bottom" constant="20" id="2ws-ZN-HMz"/>
+                                                    <constraint firstItem="qdc-Yc-vvY" firstAttribute="top" secondItem="B1v-cZ-w9a" secondAttribute="bottom" constant="10" id="2ws-ZN-HMz"/>
                                                     <constraint firstItem="HMu-ho-ymY" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="36q-Ll-H5q"/>
-                                                    <constraint firstItem="o5w-xB-TxS" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="621-NI-EcG"/>
-                                                    <constraint firstItem="HMu-ho-ymY" firstAttribute="top" secondItem="ijv-Id-cBC" secondAttribute="bottom" constant="20" id="9aJ-lj-lVB"/>
-                                                    <constraint firstItem="ijv-Id-cBC" firstAttribute="top" secondItem="qdc-Yc-vvY" secondAttribute="bottom" constant="20" id="C4Z-Nn-Gdn"/>
+                                                    <constraint firstItem="HMu-ho-ymY" firstAttribute="top" secondItem="ijv-Id-cBC" secondAttribute="bottom" constant="10" id="9aJ-lj-lVB"/>
+                                                    <constraint firstItem="ijv-Id-cBC" firstAttribute="top" secondItem="qdc-Yc-vvY" secondAttribute="bottom" constant="10" id="C4Z-Nn-Gdn"/>
                                                     <constraint firstItem="qdc-Yc-vvY" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="CMn-SW-oCg"/>
                                                     <constraint firstItem="HMu-ho-ymY" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="CV0-Ea-Ctv"/>
                                                     <constraint firstItem="GRQ-c3-7Ht" firstAttribute="top" secondItem="3pC-4P-rX3" secondAttribute="top" constant="30" id="Ctu-2y-AZl"/>
                                                     <constraint firstAttribute="height" constant="667" id="DhB-F6-aDN"/>
-                                                    <constraint firstItem="B1v-cZ-w9a" firstAttribute="top" secondItem="ki1-b6-xGf" secondAttribute="bottom" constant="20" id="HsA-ge-uHc"/>
+                                                    <constraint firstItem="WIX-bk-BGd" firstAttribute="top" secondItem="o5w-xB-TxS" secondAttribute="bottom" constant="10" id="HFS-bC-G6W"/>
+                                                    <constraint firstItem="B1v-cZ-w9a" firstAttribute="top" secondItem="ki1-b6-xGf" secondAttribute="bottom" constant="10" id="HsA-ge-uHc"/>
                                                     <constraint firstItem="ijv-Id-cBC" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="Jue-ob-j9c"/>
+                                                    <constraint firstItem="o5w-xB-TxS" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="Jya-Cn-mHm"/>
+                                                    <constraint firstItem="2JA-xJ-O0g" firstAttribute="bottom" secondItem="WIX-bk-BGd" secondAttribute="bottom" id="W1D-h1-guE"/>
                                                     <constraint firstItem="o5w-xB-TxS" firstAttribute="top" secondItem="HMu-ho-ymY" secondAttribute="bottom" constant="20" id="X3m-Sr-sm0"/>
                                                     <constraint firstItem="GRQ-c3-7Ht" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="aUN-aL-CAj"/>
                                                     <constraint firstItem="ki1-b6-xGf" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="ciF-1L-nvH"/>
                                                     <constraint firstItem="GRQ-c3-7Ht" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="h6G-ar-K1f"/>
+                                                    <constraint firstItem="WIX-bk-BGd" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="kNb-AZ-nJf"/>
                                                     <constraint firstItem="ki1-b6-xGf" firstAttribute="top" secondItem="GRQ-c3-7Ht" secondAttribute="bottom" constant="20" id="l98-6W-u7L"/>
                                                     <constraint firstItem="B1v-cZ-w9a" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="mU1-rj-icu"/>
                                                     <constraint firstItem="ki1-b6-xGf" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="tJi-Se-a9c"/>
                                                     <constraint firstItem="qdc-Yc-vvY" firstAttribute="centerX" secondItem="3pC-4P-rX3" secondAttribute="centerX" id="tSD-8x-Txl"/>
                                                     <constraint firstItem="B1v-cZ-w9a" firstAttribute="leading" secondItem="3pC-4P-rX3" secondAttribute="leading" constant="40" id="tb9-8u-sBV"/>
+                                                    <constraint firstItem="2JA-xJ-O0g" firstAttribute="leading" secondItem="WIX-bk-BGd" secondAttribute="trailing" constant="17" id="uvW-mw-kaV"/>
+                                                    <constraint firstItem="2JA-xJ-O0g" firstAttribute="top" secondItem="o5w-xB-TxS" secondAttribute="bottom" constant="10" id="xPV-Fm-kUa"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -290,15 +310,7 @@
                             <constraint firstAttribute="bottom" secondItem="COH-Uu-ukt" secondAttribute="bottom" id="pkT-Si-FD6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xAg-8s-8D5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="TXP-xm-qs0">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nc4-ys-TsE">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Huỷ"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="xAg-8s-8D5"/>
                     <connections>
                         <outlet property="txtfEmail" destination="ijv-Id-cBC" id="2EI-i5-MxV"/>
                         <outlet property="txtfMobile" destination="HMu-ho-ymY" id="V58-Tc-D2B"/>
@@ -309,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBZ-mJ-5Sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7426" y="-577"/>
+            <point key="canvasLocation" x="7424.8000000000002" y="-577.06146926536735"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1hJ-SY-J4x">
@@ -339,7 +351,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAt-CL-sNk">
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -377,8 +389,11 @@
                                             <constraint firstAttribute="width" constant="20" id="pLe-ov-tn2"/>
                                         </constraints>
                                         <state key="normal" image="checkbox-unchecked"/>
+                                        <connections>
+                                            <action selector="btnCheckBoxAction:" destination="kDN-Ru-IcD" eventType="touchUpInside" id="hWc-L0-2AR"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiện mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-Lg-VZO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiển thị mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-Lg-VZO">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -416,7 +431,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="K8E-f8-YSZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="iOl-W7-N2k">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lZh-Wu-QFM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lZh-Wu-QFM">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Huỷ"/>
