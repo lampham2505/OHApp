@@ -44,6 +44,6 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func btnLoginDismissAction(_ sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+        self.dismiss(animated: true, completion: {})
     }
 }
