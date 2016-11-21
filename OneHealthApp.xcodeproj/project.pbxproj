@@ -40,8 +40,8 @@
 		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
 		84E6CC5D1DE2CCD200F883A3 /* QuestionTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC5C1DE2CCD200F883A3 /* QuestionTabTableViewCell.swift */; };
 		84E6CC5F1DE2CCDE00F883A3 /* QuestionTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC5E1DE2CCDE00F883A3 /* QuestionTabViewController.swift */; };
-		84E6CC611DE2CCEC00F883A3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC601DE2CCEC00F883A3 /* NewsTableViewCell.swift */; };
 		84E6CC671DE2CD2A00F883A3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */; };
+		84E6CC691DE2D0CB00F883A3 /* NewsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC681DE2D0CB00F883A3 /* NewsTabViewController.swift */; };
 		84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */; };
 		EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */; };
 /* End PBXBuildFile section */
@@ -108,8 +108,8 @@
 		847B58C01DDEB286008A35F5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		84E6CC5C1DE2CCD200F883A3 /* QuestionTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTabTableViewCell.swift; path = NewsViewController/QuestionTabTableViewCell.swift; sourceTree = "<group>"; };
 		84E6CC5E1DE2CCDE00F883A3 /* QuestionTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTabViewController.swift; path = NewsViewController/QuestionTabViewController.swift; sourceTree = "<group>"; };
-		84E6CC601DE2CCEC00F883A3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		84E6CC681DE2D0CB00F883A3 /* NewsTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTabViewController.swift; path = NewsViewController/NewsTabViewController.swift; sourceTree = "<group>"; };
 		84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = NotificationViewController/NotificationViewController.swift; sourceTree = "<group>"; };
 		C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 			children = (
 				3ACFBD201DCD940D00157D97 /* NewsViewController.swift */,
 				3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */,
-				84E6CC601DE2CCEC00F883A3 /* NewsTableViewCell.swift */,
+				84E6CC681DE2D0CB00F883A3 /* NewsTabViewController.swift */,
 				84E6CC5C1DE2CCD200F883A3 /* QuestionTabTableViewCell.swift */,
 				84E6CC5E1DE2CCDE00F883A3 /* QuestionTabViewController.swift */,
 			);
@@ -572,7 +572,6 @@
 				3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */,
 				84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */,
 				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
-				84E6CC611DE2CCEC00F883A3 /* NewsTableViewCell.swift in Sources */,
 				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
 				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
@@ -592,6 +591,7 @@
 				3A7A0A481DDC07B90088C267 /* SWRevealViewController.m in Sources */,
 				3A771D821DDD49D000634FB3 /* APIError.m in Sources */,
 				3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */,
+				84E6CC691DE2D0CB00F883A3 /* NewsTabViewController.swift in Sources */,
 				3A8E54F31DCC1BCB0059EA2A /* AppDelegate.swift in Sources */,
 				84E6CC5D1DE2CCD200F883A3 /* QuestionTabTableViewCell.swift in Sources */,
 				3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */,

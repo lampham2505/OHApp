@@ -14,8 +14,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var lblHeader: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var txtvContent: UITextView!
-    //@IBOutlet var lblQuestion: UILabel!
-    //@IBOutlet var lblAnswer: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
