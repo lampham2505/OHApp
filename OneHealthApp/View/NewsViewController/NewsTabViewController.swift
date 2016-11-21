@@ -25,7 +25,7 @@ class NewsTabViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //tableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 300
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrList.count

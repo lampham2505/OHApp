@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class NewsViewController: UIViewController {
     
     @IBOutlet weak var lblWelcome: UILabel!
@@ -19,7 +21,9 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         vNews.isHidden = false
         vQuestion.isHidden = true
+        //performSegue(withIdentifier: "QuestionTabViewController", sender: nil)
         settingNavBar()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.AddQuestion), name:NSNotification.Name(rawValue: "pushToAddQuestionVC"), object: nil)
     }
     //MARK: Setting NavBar
     func settingNavBar() {
@@ -42,4 +46,20 @@ class NewsViewController: UIViewController {
             break
         }
     }
+    
+    //MARK: Child Delegate
+    
+    func AddQuestion() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddQuestionViewController") as! UIViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    //MARK: Set delegate for Question ContainerView
+//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if(segue.identifier == "QuestionTabViewController"){
+//            let embedVC = segue.destination as! QuestionTabViewController
+//            embedVC.delegate = self
+//        }
+//    }
 }

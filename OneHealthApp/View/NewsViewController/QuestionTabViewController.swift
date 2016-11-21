@@ -8,8 +8,17 @@
 
 import UIKit
 
+// MARK: QuestionTabViewControllerDelegate
+//protocol QuestionTabViewControllerDelegate :NSObjectProtocol{
+//    func AddQuestion()
+//}
+
+
 class QuestionTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var arrList:[String] = ["tieu de","cau hoi","tra loi"]
+    
+    //var delegate :QuestionTabViewControllerDelegate?
+    
     @IBOutlet weak var btnAddQuestion: UIButton!
     @IBOutlet weak var tblQuestion: UITableView!
     
@@ -22,7 +31,11 @@ class QuestionTabViewController: UIViewController, UITableViewDelegate, UITableV
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+    }
+    
+    @IBAction func btnAddQuesitonAction(_ sender: AnyObject) {
+        //delegate?.AddQuestion()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "pushToAddQuestionVC"), object: nil)
     }
     
     //tableView
