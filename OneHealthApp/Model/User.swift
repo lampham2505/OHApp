@@ -10,6 +10,7 @@ import Foundation
 
 class User: NSObject {
     var UserId:String = ""
+    var Token:String = ""
     override init() {
         
     }

@@ -34,7 +34,6 @@
 		3AC664461DCC5F620001F8A5 /* TabbarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664451DCC5F620001F8A5 /* TabbarHomeViewController.swift */; };
 		3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664491DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift */; };
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
-		3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD221DCD96B100157D97 /* NewsTableViewCell.swift */; };
 		84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329DC31DE0042A004F4C6F /* ActiveViewController.swift */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
 		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
@@ -573,7 +572,6 @@
 				84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */,
 				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
 				84E6CC611DE2CCEC00F883A3 /* NewsTableViewCell.swift in Sources */,
-				3ACFBD231DCD96B100157D97 /* NewsTableViewCell.swift in Sources */,
 				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
 				84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */,
@@ -770,6 +768,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneHealthApp/OneHealthApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
