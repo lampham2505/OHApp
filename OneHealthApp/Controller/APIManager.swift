@@ -33,7 +33,7 @@ class APIManager: NSObject {
     }
     func parseUser(data:NSDictionary)->User{
         let user:User = User.init()
-        user.UserId = data["UserId"] as! String
+        user.UserId = data["UserID"] as! String
         user.Token = data["Token"] as! String
         return user
     }

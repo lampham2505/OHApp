@@ -25,7 +25,8 @@ class APIHelper: NSObject {
                 complete(nil, _statusError)
             }else{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: data as Data, options: []) as! [String:Any]
+                    print(data)
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
                     if json[key_status_error] as! Int == Int(status_code_success) {
                         if keyList == "" {
                             complete(json as NSDictionary?, nil)
