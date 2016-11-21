@@ -1,18 +1,18 @@
 //
-//  NewsTableViewCell.swift
+//  QuestionTabTableViewCell.swift
 //  OneHealthApp
 //
-//  Created by Viet Anh on 11/5/16.
+//  Created by Lâm Phạm on 11/21/16.
 //  Copyright © 2016 OneHealth. All rights reserved.
 //
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
-    
-    @IBOutlet var lblHeader: UILabel!
-    //@IBOutlet var lblQuestion: UILabel!
-    //@IBOutlet var lblAnswer: UILabel!
+class QuestionTabTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var lblHeader: UILabel!
+    @IBOutlet weak var lblQuestion: UILabel!
+    @IBOutlet weak var lblAnswer: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
