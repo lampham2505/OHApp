@@ -21,8 +21,8 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         vNews.isHidden = false
         vQuestion.isHidden = true
-        //performSegue(withIdentifier: "QuestionTabViewController", sender: nil)
         settingNavBar()
+        //MARK: - NotificationCenter
         NotificationCenter.default.addObserver(self, selector: #selector(self.AddQuestion), name:NSNotification.Name(rawValue: "pushToAddQuestionVC"), object: nil)
     }
     //MARK: Setting NavBar

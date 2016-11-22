@@ -32,7 +32,8 @@ class RegisterViewController: UIViewController {
         } else if (txtfPassword.text != txtfPasswordConfirm.text){
                     let _statusError = APIError.init(reason: "Mật khẩu nhập lại không đúng", andCode: 0)
                     Utils.show(_statusError)
-                }else {self.register(name: txtfName.text!, password: txtfPassword.text!, email: txtfEmail.text!, mobile:(txtfMobile.text!))
+            }else {
+            self.register(name: txtfName.text!, password: txtfPassword.text!, email: txtfEmail.text!, mobile:(txtfMobile.text!))
         }
     }
     @IBAction func btnCheckBoxAction(_ sender: AnyObject) {
@@ -55,14 +56,14 @@ class RegisterViewController: UIViewController {
     func login(username: String, password: String) {
         APIManager.sharedInstance.loginUser(username: self.txtfMobile.text!, password: self.txtfPassword.text!, completion: { (user, error) in
             if error == nil {
-                
-                self.pushToActiveVC()
+                AppViewController.shareInstance.user = user!
             } else {
                 Utils.show(error)
             }
         })
     }
     func activeUserAlert(userID: String, passcode: String, token: String) {
+        
         APIManager.sharedInstance.activeUser(userID: userID, passcode: passcode, token: token) { (_ status:Int,_ error:APIError?) in
             if error == nil {
                 self.pushToActiveVC()
@@ -72,7 +73,9 @@ class RegisterViewController: UIViewController {
         }
     }
     func pushToActiveVC() {
-        self.navigationController?.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "ActiveViewController") as UIViewController, animated: true)
+        
+                self.navigationController?.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "ActiveViewController") as UIViewController, animated: true)
+        
     }
 //    func alertView() -> UIAlertController{
 //        let registerCodeAlert = UIAlertController(title: "Nhập mã xác thực", message: "Một mã xác thực đã được gửi đến số điện thoại của bạn dưới dạng tin nhắn, hãy nhập nó vào ô bên dưới", preferredStyle: .alert)

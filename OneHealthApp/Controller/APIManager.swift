@@ -5,7 +5,6 @@
 //  Created by Viet Anh on 11/4/16.
 //  Copyright © 2016 OneHealth. All rights reserved.
 //
-
 import UIKit
 
 class APIManager: NSObject {
@@ -33,7 +32,8 @@ class APIManager: NSObject {
     }
     func parseUser(data:NSDictionary)->User{
         let user:User = User.init()
-        user.UserId = data["UserId"] as! String
+        user.UserId = data["UserID"] as! String
+        user.Token = data["Token"] as! String
         return user
     }
     func registerUser(name: String, password: String, email: String,  mobile: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
@@ -58,5 +58,15 @@ class APIManager: NSObject {
             }
         })
     }
-
+    func updateUser(userID: String,name: String, fullName: String, mobile: String, email: String, dob: String, address: String, gender: String, introduction: String, location: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
+        self.userBussiness().APIUpdateUser(userID: userID,name: name, fullName: fullName, mobile: mobile, email: email, dob: dob, address: address, gender: gender, introduction: introduction, location: location, completion:{ (data:NSDictionary?,error:APIError?) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    completion(data?[key_status_error] as! Int, error)
+                }else{
+                    completion(Int(status_code_failed), error)
+                }
+            }
+        })
+    }
 }
