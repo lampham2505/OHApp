@@ -18,7 +18,7 @@ class UserController: NSObject {
         let postString = "Mobile=\(username)&Password=\(password)&Type=0&Email=0&HardwareID=0"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data!, urlresponse: response, error: error as NSError?,keyList:"", complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: (data as Data?)!, urlresponse: response, error: error as NSError?,keyList:"", complete: { (json, error) in
                 completion(json, error)
             })
         }
