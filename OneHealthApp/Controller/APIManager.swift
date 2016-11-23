@@ -17,7 +17,7 @@ class APIManager: NSObject {
     func userBussiness() -> UserController{
         return UserController.init(baseURL: baseUrl)
     }
-    func loginUser(username:String, password:String, completion: @escaping (_ user: User?,_ error:APIError?) -> ()){
+    func loginUser(username:String, password:String, completion: @escaping ( user: User?, error:APIError?) -> ()){
         self.userBussiness().APILoginUser(username: username,password:password, completion:{ (data:NSDictionary?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
@@ -57,6 +57,19 @@ class APIManager: NSObject {
                 }
             }
         })
+    }
+    func readUser(userID: String, completion: @escaping (_ arr:NSMutableArray,_ error:APIError?) -> ()){
+        self.userBussiness().APIReadUser(userID: userID) { (data:NSDictionary?,error:APIError?) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    for item in data!{
+                        print(item)
+                    }
+                }else{
+                    
+                }
+            }
+        }
     }
     func updateUser(userID: String,name: String, fullName: String, mobile: String, email: String, dob: String, address: String, gender: String, introduction: String, location: String, completion: @escaping (_ status:Int,_ error:APIError?) -> ()){
         self.userBussiness().APIUpdateUser(userID: userID,name: name, fullName: fullName, mobile: mobile, email: email, dob: dob, address: address, gender: gender, introduction: introduction, location: location, completion:{ (data:NSDictionary?,error:APIError?) in
