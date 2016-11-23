@@ -13,8 +13,6 @@ class AppViewController: UIViewController {
     static var shareInstance = AppViewController()
     
     var user = User()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

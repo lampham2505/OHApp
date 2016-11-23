@@ -35,7 +35,7 @@ class QuestionTabViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func btnAddQuesitonAction(_ sender: AnyObject) {
         //delegate?.AddQuestion()
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "pushToAddQuestionVC"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "presentAddQuestionVC"), object: nil)
     }
     
     //tableView

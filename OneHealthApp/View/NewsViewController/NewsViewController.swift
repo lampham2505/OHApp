@@ -23,7 +23,7 @@ class NewsViewController: UIViewController {
         vQuestion.isHidden = true
         settingNavBar()
         //MARK: - NotificationCenter
-        NotificationCenter.default.addObserver(self, selector: #selector(self.AddQuestion), name:NSNotification.Name(rawValue: "pushToAddQuestionVC"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.AddQuestion), name:NSNotification.Name(rawValue: "presentAddQuestionVC"), object: nil)
     }
     //MARK: Setting NavBar
     func settingNavBar() {
@@ -50,9 +50,11 @@ class NewsViewController: UIViewController {
     //MARK: Child Delegate
     
     func AddQuestion() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddQuestionViewController") as! UIViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let addQuestionVC = storyBoard.instantiateViewController(withIdentifier: "AddQuestionViewController") as! UIViewController
+//        self.navigationController?.pushViewController(nextViewController, animated: true)
+        let addQuestionVC =  self.storyboard?.instantiateViewController(withIdentifier: "AddQuestionVCNav") as! UINavigationController
+        self.present(addQuestionVC, animated: true, completion: nil)
     }
     
     //MARK: Set delegate for Question ContainerView

@@ -23,6 +23,5 @@ class User: NSObject {
     var isActive :String = ""
     var Avatar :String = ""
     override init() {
-        
     }
 }
