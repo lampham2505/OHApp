@@ -17,6 +17,7 @@
 #import <JSQMessagesViewController/JSQMessagesToolbarButtonFactory.h>
 #import "APIError.h"
 #import "Utils.h"
+#import "MBProgressHUD.h"
 #define status_code_failed 0
 #define status_code_success 1
 #define status_code_token -1

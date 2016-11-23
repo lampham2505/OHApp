@@ -18,15 +18,24 @@ class LoginViewController: UIViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    func login(username:String,password:String){
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        APIManager.sharedInstance.loginUser(username: username, password: password,   completion:{ (user: User?,error:APIError?) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if error == nil {
+                print(user?.UserId ?? "")
+                let _statusError = APIError.init(reason: "Đăng nhập thành công", andCode: 1)
+                Utils.show(_statusError, callback: {
+                    self.dismiss(animated: true)
+                })
+            }else{
+                print(error?.errorMessage ?? "")
+            }
+        })
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //MARK: IBAction
     @IBAction func btnLoginTapped(_ sender: AnyObject) {
         let username = txtfUser.text
@@ -35,14 +44,7 @@ class LoginViewController: UIViewController {
             let _statusError = APIError.init(reason: "Bạn phải nhập đầy đủ thông tin", andCode: 0)
             Utils.show(_statusError)
         } else {
-            APIManager.sharedInstance.loginUser(username: username!, password: password!,   completion:{ (user: User?,error:APIError?) in
-                if error == nil {
-                    print(user?.UserId ?? "")
-                    self.dismiss(animated: true, completion: {})
-                }else{
-                    print(error?.errorMessage ?? "")
-                }
-            })
+            login(username: username!, password: password!)
         }
     }
     @IBAction func btnLoginDismissAction(_ sender: AnyObject) {

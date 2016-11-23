@@ -9,6 +9,7 @@ import UIKit
 
 class APIManager: NSObject {
     var baseUrl:String!
+    var arr:[String] = []
     static let sharedInstance:APIManager = {
         let instance = APIManager()
         instance.baseUrl = "http://localhost/webservice/"
@@ -58,11 +59,31 @@ class APIManager: NSObject {
             }
         })
     }
-    func readUser(userID: String, completion: @escaping (_ arr:NSMutableArray,_ error:APIError?) -> ()){
+    func readUser(userID: String, completion: @escaping (_ arr:[String],_ error:APIError?) -> ()){
         self.userBussiness().APIReadUser(userID: userID) { (data:NSArray?,error:APIError?) in
             DispatchQueue.main.async {
                 if error == nil {
-                    print(data as Any)
+                    print(data?[0] as! NSDictionary)
+                    print((data?[0] as! NSDictionary)["Name"] as! String)
+                    let name = (data?[0] as! NSDictionary)["Name"] as! String
+                    self.arr.append(name)
+                    let fullName = (data?[0] as! NSDictionary)["FullName"] as! String
+                    self.arr.append(fullName)
+                    let mobile = (data?[0] as! NSDictionary)["Mobile"] as! String
+                    self.arr.append(mobile)
+                    let email = (data?[0] as! NSDictionary)["Email"] as! String
+                    self.arr.append(email)
+                    let dob = (data?[0] as! NSDictionary)["DOB"] as! String
+                    self.arr.append(dob)
+                    let address = (data?[0] as! NSDictionary)["Address"] as! String
+                    self.arr.append(address)
+                    let gender = (data?[0] as! NSDictionary)["gender"] as! String
+                    self.arr.append(gender)
+                    let introduction = (data?[0] as! NSDictionary)["introduction"] as! String
+                    self.arr.append(introduction)
+                    let location = (data?[0] as! NSDictionary)["location"] as! String
+                    self.arr.append(location)
+                    completion(self.arr,nil)
                 }else{
                     
                 }

@@ -10,8 +10,8 @@ import UIKit
 
 class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var arrListInfo :[String] = ["Tên hiển thị", "Tên đầy đủ", "Số điện thoại", "Email", "Ngày sinh", "Địa chỉ", "Giới tính", "Giới thiệu", "Địa điểm"]
-
+    var arrListHeader :[String] = ["Tên hiển thị", "Tên đầy đủ", "Số điện thoại", "Email", "Ngày sinh", "Địa chỉ", "Giới tính", "Giới thiệu", "Địa điểm"]
+    var arrListInfo:[String] = []
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
@@ -53,7 +53,10 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func getInfoUser() {
         APIManager.sharedInstance.readUser(userID: "20") { (arr, error) in
-            
+            if error == nil {
+                self.arrListInfo = arr
+                self.tblInfo.reloadData()
+            }
         }
     }
     //MARK: TableView
@@ -63,7 +66,8 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as? InfoTableViewCell
-        cell?.lblHeader.text = arrListInfo[indexPath.row]
+        cell?.lblHeader.text = arrListHeader[indexPath.row]
+        cell?.txtfInfo.text = self.arrListInfo[indexPath.row]
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
