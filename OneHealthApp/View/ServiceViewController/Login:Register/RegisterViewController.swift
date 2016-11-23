@@ -55,7 +55,6 @@ class RegisterViewController: UIViewController {
     func login(username: String, password: String) {
         APIManager.sharedInstance.loginUser(username: self.txtfMobile.text!, password: self.txtfPassword.text!, completion: { (user, error) in
             if error == nil {
-                AppViewController.shareInstance.user = user!
                 self.pushToActiveVC(user: user!)
             }else{
                 Utils.show(error)

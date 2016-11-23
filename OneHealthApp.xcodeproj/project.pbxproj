@@ -36,6 +36,9 @@
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		842C3F591DE3DCF30027ABA7 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C3F581DE3DCF30027ABA7 /* InfoTableViewCell.swift */; };
 		84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329DC31DE0042A004F4C6F /* ActiveViewController.swift */; };
+		84496B3D1DE5480C002A56F4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 84496B391DE5480C002A56F4 /* LICENSE */; };
+		84496B3E1DE5480C002A56F4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */; };
+		84496B3F1DE5480C002A56F4 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 84496B3C1DE5480C002A56F4 /* README.mdown */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
 		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
 		84D960AF1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AB1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift */; };
@@ -44,7 +47,6 @@
 		84D960B21DE2D7AE00BB3AC8 /* QuestionTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AE1DE2D7AE00BB3AC8 /* QuestionTabViewController.swift */; };
 		84E122921DE42AF500AB9BFF /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E122911DE42AF500AB9BFF /* AddQuestionViewController.swift */; };
 		84E6CC671DE2CD2A00F883A3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */; };
-		84EAFA371DE332AC00F4B071 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EAFA361DE332AC00F4B071 /* AppViewController.swift */; };
 		84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */; };
 		EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */; };
 /* End PBXBuildFile section */
@@ -106,6 +108,10 @@
 		6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneHealthApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842C3F581DE3DCF30027ABA7 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoTableViewCell.swift; path = InfoViewController/InfoTableViewCell.swift; sourceTree = "<group>"; };
 		84329DC31DE0042A004F4C6F /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveViewController.swift; path = "Login:Register/ActiveViewController.swift"; sourceTree = "<group>"; };
+		84496B391DE5480C002A56F4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		84496B3A1DE5480C002A56F4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		84496B3C1DE5480C002A56F4 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
 		847B58BF1DDEB286008A35F5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		847B58C01DDEB286008A35F5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -115,7 +121,6 @@
 		84D960AE1DE2D7AE00BB3AC8 /* QuestionTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTabViewController.swift; path = NewsViewController/QuestionTabViewController.swift; sourceTree = "<group>"; };
 		84E122911DE42AF500AB9BFF /* AddQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddQuestionViewController.swift; path = NewsViewController/AddQuestionViewController.swift; sourceTree = "<group>"; };
 		84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		84EAFA361DE332AC00F4B071 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppViewController.swift; path = Controller/AppViewController.swift; sourceTree = "<group>"; };
 		84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = NotificationViewController/NotificationViewController.swift; sourceTree = "<group>"; };
 		C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneHealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneHealthApp/Pods-OneHealthApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 		3A7A0A441DDC06D00088C267 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84496B381DE5480C002A56F4 /* MBProgressHUD */,
 				84E6CC651DE2CD2A00F883A3 /* CheckBox */,
 				847B58BE1DDEB286008A35F5 /* Utils */,
 				3A7A0A451DDC07B90088C267 /* SWRevealViewController */,
@@ -248,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				3A5550201DCC7BF2007B4E21 /* APIManager.swift */,
-				84EAFA361DE332AC00F4B071 /* AppViewController.swift */,
 				3A7A0A501DDC5BAE0088C267 /* UserController.swift */,
 				3A771D771DDD425900634FB3 /* Lib Error */,
 			);
@@ -372,6 +377,17 @@
 				C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84496B381DE5480C002A56F4 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				84496B391DE5480C002A56F4 /* LICENSE */,
+				84496B3A1DE5480C002A56F4 /* MBProgressHUD.h */,
+				84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */,
+				84496B3C1DE5480C002A56F4 /* README.mdown */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		847B58BE1DDEB286008A35F5 /* Utils */ = {
@@ -504,6 +520,7 @@
 			files = (
 				3A8E54CA1DCC1A750059EA2A /* LaunchScreen.storyboard in Resources */,
 				3A8E54C71DCC1A750059EA2A /* Assets.xcassets in Resources */,
+				84496B3D1DE5480C002A56F4 /* LICENSE in Resources */,
 				3A8E54C51DCC1A750059EA2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,10 +594,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84EAFA371DE332AC00F4B071 /* AppViewController.swift in Sources */,
 				3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */,
 				3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */,
 				842C3F591DE3DCF30027ABA7 /* InfoTableViewCell.swift in Sources */,
+				84496B3E1DE5480C002A56F4 /* MBProgressHUD.m in Sources */,
 				84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */,
 				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
 				84D960AF1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift in Sources */,
@@ -601,6 +618,7 @@
 				3A7A0A4F1DDC4A510088C267 /* ChatViewController.swift in Sources */,
 				3A5550231DCC8289007B4E21 /* User.swift in Sources */,
 				3A8E54F91DCC314D0059EA2A /* ServiceTableViewCell.swift in Sources */,
+				84496B3F1DE5480C002A56F4 /* README.mdown in Sources */,
 				3A7A0A481DDC07B90088C267 /* SWRevealViewController.m in Sources */,
 				3A771D821DDD49D000634FB3 /* APIError.m in Sources */,
 				84E122921DE42AF500AB9BFF /* AddQuestionViewController.swift in Sources */,

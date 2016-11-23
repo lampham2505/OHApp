@@ -21,7 +21,6 @@ class ActiveViewController: UIViewController {
     @IBAction func btnActiveAction(_ sender: AnyObject) {
         let passcode = txtfActiveCode.text!
         let passcodeStr = String(describing: passcode)
-        let user = AppViewController.shareInstance.user
         APIManager.sharedInstance.activeUser(userID: user.UserId, passcode: passcodeStr, token: user.Token) { (_ status:Int,_ error:APIError?) in
             if error == nil {
                 if (status == 0) {

@@ -12,7 +12,7 @@ class InfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var lblHeader: UILabel!
-    @IBOutlet weak var txtfInfo: UITextView!
+    @IBOutlet weak var txtfInfo: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
