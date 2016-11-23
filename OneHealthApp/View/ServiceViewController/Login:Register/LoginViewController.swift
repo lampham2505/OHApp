@@ -52,4 +52,29 @@ class LoginViewController: UIViewController {
         bShowPassword = !bShowPassword
         txtfPassword.isSecureTextEntry = !bShowPassword
     }
+//    // MARK: - Textfield Delegate
+//    func hideKeyboard() {
+//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        view.endEditing(true)
+//    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        //hide keyboard
+//        //textField.resignFirstResponder()
+//        let nextTag = textField.tag + 1
+//        // Try to find next responder
+//        let nextResponder = textField.superview?.viewWithTag(nextTag) as UIResponder!
+//        
+//        if (nextResponder != nil){
+//            // Found next responder, so set it.
+//            nextResponder?.becomeFirstResponder()
+//            
+//        }
+//        else
+//        {
+//            // Not found, so remove keyboard
+//            textField.resignFirstResponder()
+//            hideKeyboard()
+//        }
+//        return true
+//    }
 }

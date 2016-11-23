@@ -28,6 +28,7 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getInfoUser()
         settingNavBar()
         tblInfo.reloadData()
     }
@@ -49,6 +50,11 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let img:UIImage = UIImage(named: "reveal-icon")!
         let revealButtonItem = UIBarButtonItem.init(image: img, style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
         self.navigationItem.leftBarButtonItem = revealButtonItem
+    }
+    func getInfoUser() {
+        APIManager.sharedInstance.readUser(userID: "20") { (arr, error) in
+            
+        }
     }
     //MARK: TableView
     //TableView

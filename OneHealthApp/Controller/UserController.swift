@@ -12,7 +12,7 @@ class UserController: NSObject {
     init(baseURL:String){
         baseUrl = baseURL
     }
-    func APILoginUser(username: String,password:String, completion: @escaping ( data: NSDictionary?, error:APIError?) -> ()) {
+    func APILoginUser(username: String,password:String, completion: @escaping ( _ data: NSDictionary?, _ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)LoginUser.php")!)
         request.httpMethod = "POST"
         let postString = "Mobile=\(username)&Password=\(password)&Type=0&Email=0&HardwareID=0"
@@ -21,13 +21,13 @@ class UserController: NSObject {
         urlconfig.timeoutIntervalForRequest = 12
         urlconfig.timeoutIntervalForResource = 12
         let task = URLSession(configuration: urlconfig).dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json,error,arr) in
                 completion(json, error)
             })
         }
         task.resume()
     }
-    func APIRegisterUser(name: String, password: String, email: String,  mobile: String, completion: @escaping ( data: NSDictionary?, error:APIError?) -> ()) {
+    func APIRegisterUser(name: String, password: String, email: String,  mobile: String, completion: @escaping ( _ data: NSDictionary?, _ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)RegisterUser.php")!)
         request.httpMethod = "POST"
         let postString = "Name=\(name)&Password=\(password)&Email=\(email)&Mobile=\(mobile)"
@@ -36,13 +36,13 @@ class UserController: NSObject {
         urlconfig.timeoutIntervalForRequest = 12
         urlconfig.timeoutIntervalForResource = 12
         let task = URLSession(configuration: urlconfig).dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error,arr) in
                 completion(json, error)
             })
         }
         task.resume()
     }
-    func APIActiveUser(userID: String,passcode: String, token: String, completion: @escaping ( data: NSDictionary?, error:APIError?) -> ()) {
+    func APIActiveUser(userID: String,passcode: String, token: String, completion: @escaping ( _ data: NSDictionary?, _ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)ActiveUser.php")!)
         request.httpMethod = "POST"
         let postString = "UserID=\(userID)&Passcode=\(passcode)&Token=\(token)"
@@ -51,13 +51,13 @@ class UserController: NSObject {
         urlconfig.timeoutIntervalForRequest = 12
         urlconfig.timeoutIntervalForResource = 12
         let task = URLSession(configuration: urlconfig).dataTask(with: request) {data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error) in
-                completion(json, error)
+            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json,error,arr) in
+                completion(json,error)
             })
         }
         task.resume()
     }
-    func APIReadUser(userID: String, completion: @escaping ( data: NSDictionary?, error:APIError?) -> ()) {
+    func APIReadUser(userID: String, completion: @escaping ( _ data: NSArray?, _ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)ReadUser.php")!)
         request.httpMethod = "POST"
         let postString = "UserID=\(userID)"
@@ -66,14 +66,14 @@ class UserController: NSObject {
         urlconfig.timeoutIntervalForRequest = 12
         urlconfig.timeoutIntervalForResource = 12
         let task = URLSession(configuration: urlconfig).dataTask(with: request) {data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:key_status_list, complete: { (json, error) in
+            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:key_status_list, complete: { (json:NSDictionary?,error:APIError?,arr) in
                 
-                completion(json, error)
+                completion(arr,error)
             })
         }
         task.resume()
     }
-    func APIUpdateUser(userID: String,name: String, fullName: String, mobile: String, email: String, dob: String, address: String, gender: String, introduction: String, location: String, completion: @escaping ( data: NSDictionary?, error:APIError?) -> ()) {
+    func APIUpdateUser(userID: String,name: String, fullName: String, mobile: String, email: String, dob: String, address: String, gender: String, introduction: String, location: String, completion: @escaping ( _ data: NSDictionary?, _ error:APIError?) -> ()) {
         var request = URLRequest(url: URL(string: "\(baseUrl!)isActive.php")!)
         request.httpMethod = "POST"
         let postString = "UserID=\(userID)&Name=\(name)&FullName=\(fullName)&Mobile=\(mobile)&Email=\(email)&DOB=\(dob)&Address=\(address)&Gender=\(gender)&Introduction=\(introduction)&Location=\(location)"
@@ -82,8 +82,8 @@ class UserController: NSObject {
         urlconfig.timeoutIntervalForRequest = 12
         urlconfig.timeoutIntervalForResource = 12
         let task = URLSession(configuration: urlconfig).dataTask(with: request) { data, response, error in
-            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error) in
-                completion(json, error)
+            APIHelper.processDataResponseOnlyMessage(data: data, urlresponse: response as URLResponse?, error: error as NSError?,keyList:"", complete: { (json, error,arr) in
+                completion(json,error)
             })
         }
         task.resume()
