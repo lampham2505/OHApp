@@ -17,15 +17,10 @@ class ServiceTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    @IBAction func btnActionOk(_ sender: AnyObject) {
-        if let callBack = self.respondToButton {
-            callBack(index!)
-        }
-    }
+//    @IBAction func btnActionOk(_ sender: AnyObject) {
+//        if let callBack = self.respondToButton {
+//            callBack(index!)
+//        }
+//    }
 
 }

@@ -44,7 +44,9 @@ class RegisterViewController: UIViewController {
    
     //MARK: Call API
     func register(name: String, password: String, email: String, mobile: String) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         APIManager.sharedInstance.registerUser(name: name, password: password, email: email, mobile: mobile) { (_ status:Int,_ error:APIError?) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             if error == nil {
                 self.login(username: self.txtfMobile.text!, password: self.txtfPassword.text!)
             } else {
@@ -53,7 +55,9 @@ class RegisterViewController: UIViewController {
         }
     }
     func login(username: String, password: String) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         APIManager.sharedInstance.loginUser(username: self.txtfMobile.text!, password: self.txtfPassword.text!, completion: { (user, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             if error == nil {
                 self.pushToActiveVC(user: user!)
             }else{
@@ -61,28 +65,9 @@ class RegisterViewController: UIViewController {
             }
         })
     }
-
     func pushToActiveVC(user:User) {
         let VC = self.storyboard!.instantiateViewController(withIdentifier: "ActiveViewController") as! ActiveViewController
         VC.user = user
         self.navigationController?.pushViewController(VC, animated: true)
     }
-//    func alertView() -> UIAlertController{
-//        let registerCodeAlert = UIAlertController(title: "Nhập mã xác thực", message: "Một mã xác thực đã được gửi đến số điện thoại của bạn dưới dạng tin nhắn, hãy nhập nó vào ô bên dưới", preferredStyle: .alert)
-//            registerCodeAlert.addTextField { (textField : UITextField!) -> Void in
-//            }
-//        let firstTextField = registerCodeAlert.textFields![0] as UITextField
-//        firstTextField.placeholder = "Mã xác thực"
-//        firstTextField.layer.cornerRadius = 20.0
-//        let registerAction = UIAlertAction(title: "Đăng ký", style: .default, handler: {(registerCodeAlert) -> Void in()
-//            if (firstTextField.text?.isEmpty)! {
-//                return
-//            }else {
-//                self.activeUserAlert(userID: "", passcode: "", token: "")
-//            }
-//        })
-//        registerCodeAlert.addAction(registerAction)
-//        return registerCodeAlert
-//    }
-    
 }

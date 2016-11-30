@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansSemibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopUpImageView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZC1-LU-NGT">
+                    <rect key="frame" x="20" y="0.0" width="280" height="140"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-6R-JZu">
+                            <rect key="frame" x="20" y="20" width="110" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="bOl-xG-eaF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                            <state key="normal" title="Chọn Ảnh">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnActionLibrary:" destination="iN0-l3-epB" eventType="touchUpInside" id="wOK-sf-4EN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYs-vT-6d5">
+                            <rect key="frame" x="150" y="20" width="110" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="WBO-3i-r9N"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                            <state key="normal" title="Chụp Ảnh">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnActionCamera:" destination="iN0-l3-epB" eventType="touchUpInside" id="wfd-ax-tlD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h84-IG-6ai">
+                            <rect key="frame" x="85" y="80" width="110" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Jbv-Ep-2e6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                            <state key="normal" title="Huỷ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="rCP-bW-k2t"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="h84-IG-6ai" firstAttribute="width" secondItem="iY3-6R-JZu" secondAttribute="width" id="2ro-Y8-x4a"/>
+                        <constraint firstItem="h84-IG-6ai" firstAttribute="centerX" secondItem="ZC1-LU-NGT" secondAttribute="centerX" id="4sj-lv-Etb"/>
+                        <constraint firstAttribute="trailing" secondItem="fYs-vT-6d5" secondAttribute="trailing" constant="20" id="7rZ-gB-c4D"/>
+                        <constraint firstItem="iY3-6R-JZu" firstAttribute="leading" secondItem="ZC1-LU-NGT" secondAttribute="leading" constant="20" id="O8S-JH-cCN"/>
+                        <constraint firstItem="iY3-6R-JZu" firstAttribute="top" secondItem="ZC1-LU-NGT" secondAttribute="top" constant="20" id="Vz2-AK-pxR"/>
+                        <constraint firstAttribute="bottom" secondItem="h84-IG-6ai" secondAttribute="bottom" constant="20" id="inD-JG-2VA"/>
+                        <constraint firstItem="fYs-vT-6d5" firstAttribute="leading" secondItem="iY3-6R-JZu" secondAttribute="trailing" constant="20" id="kfB-eB-7PA"/>
+                        <constraint firstItem="fYs-vT-6d5" firstAttribute="top" secondItem="iY3-6R-JZu" secondAttribute="top" id="nqG-uu-yGo"/>
+                        <constraint firstItem="h84-IG-6ai" firstAttribute="top" secondItem="fYs-vT-6d5" secondAttribute="bottom" constant="20" id="oY6-u5-uFS"/>
+                        <constraint firstItem="fYs-vT-6d5" firstAttribute="width" secondItem="iY3-6R-JZu" secondAttribute="width" id="s6x-U6-Gte"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZC1-LU-NGT" secondAttribute="trailing" constant="20" id="BQF-iw-533"/>
+                <constraint firstItem="ZC1-LU-NGT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TjX-z2-4cR"/>
+                <constraint firstItem="ZC1-LU-NGT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hkl-ou-xU4"/>
+                <constraint firstAttribute="bottom" secondItem="ZC1-LU-NGT" secondAttribute="bottom" id="pyJ-8u-n02"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="183" y="-255"/>
+        </view>
+    </objects>
+</document>

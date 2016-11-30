@@ -11,9 +11,10 @@ import MapKit
 class ServiceMedicalExaminationViewController: UIViewController,MKMapViewDelegate{
 
     @IBOutlet var mapView: MKMapView!
-    var location:CLLocation!
+    var location:CLLocation = CLLocation ()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var annotation:MKPointAnnotation!
+    var annotation:MKPointAnnotation = MKPointAnnotation()
+    var region = MKCoordinateRegion()
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -21,21 +22,20 @@ class ServiceMedicalExaminationViewController: UIViewController,MKMapViewDelegat
     }
     func getMap(){
         if appDelegate.cordinate != nil{
-            var region = MKCoordinateRegion()
             location = CLLocation(latitude: (appDelegate.cordinate?.latitude)!, longitude: (appDelegate.cordinate?.longitude)!)
             region.center.latitude = location.coordinate.latitude
             region.center.longitude = location.coordinate.longitude
             region.span.latitudeDelta = 0.01
             region.span.longitudeDelta = 0.01
             mapView.setRegion(region, animated: true)
-            annotation = MKPointAnnotation()
             annotation.title = "Location"
             annotation.coordinate = location.coordinate
             mapView.addAnnotation(annotation)
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            mapView.add(MKCircle(center: center, radius: 10))
+//            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            mapView.add(MKCircle(center: center, radius: 10))
         }else{
-            print("Not have location")
+            let status = APIError.init(reason: "Not have location", andCode: 0)
+            Utils.show(status)
         }
         
     }
@@ -51,5 +51,8 @@ class ServiceMedicalExaminationViewController: UIViewController,MKMapViewDelegat
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectOnlineViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
+    
+    @IBAction func btnActionGetLocation(_ sender: Any) {
+        getMap()
+    }
 }

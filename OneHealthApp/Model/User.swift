@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: NSObject {
+class User: NSObject,NSCoding {
     var UserId:String = ""
     var Name :String = ""
     var FullName :String = ""
@@ -23,5 +23,11 @@ class User: NSObject {
     var isActive :String = ""
     var Avatar :String = ""
     override init() {
+    }
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.UserId, forKey: "UserId")
+    }
+    required init?(coder aDecoder: NSCoder) {
+        self.UserId = aDecoder.decodeObject(forKey: "UserId") as! String
     }
 }

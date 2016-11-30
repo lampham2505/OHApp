@@ -40,7 +40,30 @@
     [topview presentViewController:alert animated:YES completion:nil];
                                 
 }
-
++ (void)showSucess:(APIError*)error  {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:error.errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:actionOK];
+    UIViewController *topview = [self topViewController:nil];
+    [topview presentViewController:alert animated:YES completion:nil];
+    
+}
++ (void)showSucess:(APIError*)error callback:(void(^)(void))callback {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:error.errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        callback();
+    }];
+    [alert addAction:actionOK];
+    
+    UIViewController *topview = [self topViewController:nil];
+    [topview presentViewController:alert animated:YES completion:nil];
+    
+    
+}
 + (void)showAPIError:(APIError*)error callback:(void(^)(void))callback {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.errorMessage preferredStyle:UIAlertControllerStyleAlert];
     

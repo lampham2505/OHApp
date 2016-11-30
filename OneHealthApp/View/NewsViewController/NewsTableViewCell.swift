@@ -9,11 +9,11 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imgHeader: UIView!
     @IBOutlet var lblHeader: UILabel!
     @IBOutlet weak var lblTime: UILabel!
-    @IBOutlet weak var txtvContent: UITextView!
+    @IBOutlet var lblContent: UILabel!
+    @IBOutlet var imgAvatar: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,12 @@ class NewsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    func QuestionList(question:Question){
+        lblHeader.text = question.Title
+        lblTime.text = question.times
+        lblContent.text = question.content
+        if question.ListImage.count > 0 {
+//            question.ListImage[0]["11-44.jpg"]
+        }
+    }
 }

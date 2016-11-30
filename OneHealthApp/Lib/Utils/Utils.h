@@ -12,11 +12,13 @@
 #import "APIError.h"
 @interface Utils : NSObject
 
-//+ (UIFont*)fontOpenSansBold:(CGFloat)size;
-//+ (UIFont*)fontOpenSansItalic:(CGFloat)size;
-//+ (UIFont*)fontOpenSansRegular:(CGFloat)size;
-//+ (UIView*)bottomLine:(UITextField*)textfield;
++ (UIFont*)fontOpenSansBold:(CGFloat)size;
++ (UIFont*)fontOpenSansItalic:(CGFloat)size;
++ (UIFont*)fontOpenSansRegular:(CGFloat)size;
++ (UIView*)bottomLine:(UITextField*)textfield;
 + (void)showAPIError:(APIError*)error ;
 + (void)showAPIError:(APIError*)error callback:(void(^)(void))callback;
++ (void)showSucess:(APIError*)error;
++ (void)showSucess:(APIError*)error callback:(void(^)(void))callback;
 + (void)initBorderforView:(UIView*)view cornerRadius:(CGFloat)radius borderColorHex:(UIColor*)borderColor borderWidth:(CGFloat)borderWidth masksToBound:(BOOL)maskToBound;
 @end

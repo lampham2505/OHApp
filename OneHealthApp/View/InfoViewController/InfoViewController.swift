@@ -8,10 +8,10 @@
 
 import UIKit
 
-class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
     
     var arrListHeader :[String] = ["Tên hiển thị", "Tên đầy đủ", "Số điện thoại", "Email", "Ngày sinh", "Địa chỉ", "Giới tính", "Giới thiệu", "Địa điểm"]
-    var arrListInfo:[String] = []
+    var arrListInfo:NSMutableArray = NSMutableArray()
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
@@ -24,23 +24,45 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         tblInfo.dataSource = self
         tblInfo.delegate = self
-        // Do any additional setup after loading the view.
+        tblInfo.rowHeight = UITableViewAutomaticDimension
+        tblInfo.estimatedRowHeight = 70
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getInfoUser()
         settingNavBar()
-        tblInfo.reloadData()
     }
     //MARK: - Button Action
     @IBAction func btnSaveAction(_ sender: AnyObject) {
-//        APIManager.sharedInstance.updateUser(userID: user.UserID, name: user.Name, fullName: user.FullName, mobile: user.Mobile, email: user.Email, dob: user.DOB, address: user.Address, gender: user.gender, introduction: user.Introduciton, location: user.Locatio { (_ status:Int,_ error:APIError?) in
-//            if error == nil {
-//                print("Update Successfully")
-//            } else {
-//                Utils.show(error)
-//            }
-//        })
+        //let image : UIImage = UIImage(named:"list_chat")!
+        //imgAvatar.image = image
+        //let a = EncodeBase64.imageToBase64(imageToDecode: image)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let data:Data? = UserDefaults.standard.object(forKey: keyUser) as? Data
+        if data == nil {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            let status = APIError.init(reason: "Bạn chưa đăng nhập", andCode: 0)
+            Utils.show(status)
+        }else{
+            let user = NSKeyedUnarchiver.unarchiveObject(with: data!) as! User
+            APIManager.sharedInstance.updateUser(userID: user.UserId, name: arrListInfo[0] as! String, fullName: arrListInfo[1] as! String, email: arrListInfo[3] as! String, dob: arrListInfo[4] as! String, address: arrListInfo[5] as! String, gender: arrListInfo[6] as! String, introduction: arrListInfo[7] as! String, ImageAvatar: ""){ (_ status:Int,_ error:APIError?) in
+                MBProgressHUD.hide(for: self.view, animated: true)
+                if error != nil{
+                    Utils.show(error)
+                }else{
+                    switch status {
+                    case 0:
+                        let err = APIError.init(reason: "Update thất bại", andCode: 0)
+                        Utils.show(err)
+                    case 1:
+                        let err = APIError.init(reason: "Update thành công", andCode: 1)
+                        Utils.showSucess(err)
+                        default:
+                        break
+                    }
+                }
+            }
+        }
     }
     //MARK: Setting NavBar
     func settingNavBar() {
@@ -52,14 +74,26 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationItem.leftBarButtonItem = revealButtonItem
     }
     func getInfoUser() {
-        APIManager.sharedInstance.readUser(userID: "20") { (arr, error) in
-            if error == nil {
-                self.arrListInfo = arr
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let data:Data? = UserDefaults.standard.object(forKey: keyUser) as? Data
+        if data == nil {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            let status = APIError.init(reason: "Bạn chưa đăng nhập", andCode: 0)
+            Utils.show(status)
+        }else{
+            let user = NSKeyedUnarchiver.unarchiveObject(with: data!) as! User
+            APIManager.sharedInstance.readUser(userID: user.UserId,PageID:"1",Number:"1") { (arr, error) in
+                MBProgressHUD.hide(for: self.view, animated: true)
+                if error == nil {
+                    self.arrListInfo = arr!
+                }else{
+                    Utils.show(error)
+                }
                 self.tblInfo.reloadData()
             }
+
         }
     }
-    //MARK: TableView
     //TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrListInfo.count
@@ -67,20 +101,17 @@ class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as? InfoTableViewCell
         cell?.lblHeader.text = arrListHeader[indexPath.row]
-        cell?.txtfInfo.text = self.arrListInfo[indexPath.row]
+        cell?.txtfInfo.text = self.arrListInfo[indexPath.row] as? String
+        if indexPath.row == 2 || indexPath.row == 8 {
+            cell?.txtfInfo.isUserInteractionEnabled = false
+        }else{
+            cell?.txtfInfo.tag = indexPath.row
+            cell?.txtfInfo.delegate = self
+        }
         return cell!
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.bounds.size.height/6
+    //textfied delegate
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        arrListInfo.replaceObject(at: textField.tag, with: textField.text!)
     }
-    func callBackFrommCell(indexpth:Int) {
-        if indexpth == 0 {
-            performSegue(withIdentifier: "ServiceMedicalExamination", sender: nil)
-        }else if indexpth == 1 {
-            performSegue(withIdentifier: "ServiceOnline", sender: nil)
-        }else{
-            performSegue(withIdentifier: "SelectDepartment", sender: nil)
-        }
-    }
-
 }

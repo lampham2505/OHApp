@@ -29,7 +29,7 @@ class ActiveViewController: UIViewController {
                 } else {
                     let _statusError = APIError.init(reason: "Kích hoạt thành cộng", andCode: 0)
                     Utils.show(_statusError, callback: {
-                        self.navigationController
+                        
                     })
                 }
             } else {
@@ -41,16 +41,4 @@ class ActiveViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

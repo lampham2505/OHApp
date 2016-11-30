@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1B7A411DE7CBFA001CB91B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B7A401DE7CBFA001CB91B /* Camera.swift */; };
+		3A1B7A4F1DE7DA1C001CB91B /* PopUpImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B7A4D1DE7DA1C001CB91B /* PopUpImageView.xib */; };
+		3A1B7A501DE7DBB2001CB91B /* BasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B7A441DE7D93D001CB91B /* BasePopupView.m */; };
+		3A1B7A541DE7DD07001CB91B /* PopUpImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B7A531DE7DD07001CB91B /* PopUpImageView.m */; };
+		3A1B7A561DE7E074001CB91B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1B7A551DE7E074001CB91B /* QuartzCore.framework */; };
+		3A1B7A581DE7E07C001CB91B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1B7A571DE7E07C001CB91B /* SystemConfiguration.framework */; };
+		3A1B7A591DE82044001CB91B /* ServiceMedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664491DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift */; };
+		3A1B7A5B1DE8330D001CB91B /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B7A5A1DE8330D001CB91B /* Spec.swift */; };
+		3A1B7A5D1DE83436001CB91B /* SelectOnlineViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B7A5C1DE83436001CB91B /* SelectOnlineViewControllerTableViewCell.swift */; };
 		3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55501E1DCC7299007B4E21 /* SeclectDepartmentViewController.swift */; };
 		3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550201DCC7BF2007B4E21 /* APIManager.swift */; };
 		3A5550231DCC8289007B4E21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550221DCC8289007B4E21 /* User.swift */; };
 		3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */; };
+		3A57FA611DE684B100BE5596 /* EncodeBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57FA601DE684B100BE5596 /* EncodeBase64.swift */; };
+		3A57FA631DE6C54C00BE5596 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57FA621DE6C54C00BE5596 /* Question.swift */; };
+		3A73DA581DEE823B0040EF88 /* SelectDoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73DA571DEE823B0040EF88 /* SelectDoctorTableViewCell.swift */; };
+		3A73DA5A1DEE860E0040EF88 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73DA591DEE860E0040EF88 /* Doctor.swift */; };
 		3A771D821DDD49D000634FB3 /* APIError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D7F1DDD49D000634FB3 /* APIError.m */; };
 		3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D841DDD550C00634FB3 /* APIHelper.swift */; };
 		3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A0A421DDBF4FD0088C267 /* RegisterViewController.swift */; };
@@ -32,19 +45,13 @@
 		3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E54F61DCC2A9D0059EA2A /* ServiceViewController.swift */; };
 		3A8E54F91DCC314D0059EA2A /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E54F81DCC314D0059EA2A /* ServiceTableViewCell.swift */; };
 		3AC664461DCC5F620001F8A5 /* TabbarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664451DCC5F620001F8A5 /* TabbarHomeViewController.swift */; };
-		3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC664491DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift */; };
 		3ACFBD211DCD940D00157D97 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBD201DCD940D00157D97 /* NewsViewController.swift */; };
 		842C3F591DE3DCF30027ABA7 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C3F581DE3DCF30027ABA7 /* InfoTableViewCell.swift */; };
 		84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329DC31DE0042A004F4C6F /* ActiveViewController.swift */; };
-		84496B3D1DE5480C002A56F4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 84496B391DE5480C002A56F4 /* LICENSE */; };
 		84496B3E1DE5480C002A56F4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */; };
-		84496B3F1DE5480C002A56F4 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 84496B3C1DE5480C002A56F4 /* README.mdown */; };
 		84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */; };
 		847B58C11DDEB286008A35F5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58C01DDEB286008A35F5 /* Utils.m */; };
 		84D960AF1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AB1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift */; };
-		84D960B01DE2D7AE00BB3AC8 /* NewsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AC1DE2D7AE00BB3AC8 /* NewsTabViewController.swift */; };
-		84D960B11DE2D7AE00BB3AC8 /* QuestionTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AD1DE2D7AE00BB3AC8 /* QuestionTabTableViewCell.swift */; };
-		84D960B21DE2D7AE00BB3AC8 /* QuestionTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D960AE1DE2D7AE00BB3AC8 /* QuestionTabViewController.swift */; };
 		84E122921DE42AF500AB9BFF /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E122911DE42AF500AB9BFF /* AddQuestionViewController.swift */; };
 		84E6CC671DE2CD2A00F883A3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */; };
 		84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */; };
@@ -69,10 +76,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A1B7A401DE7CBFA001CB91B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		3A1B7A431DE7D93D001CB91B /* BasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopupView.h; sourceTree = "<group>"; };
+		3A1B7A441DE7D93D001CB91B /* BasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePopupView.m; sourceTree = "<group>"; };
+		3A1B7A4D1DE7DA1C001CB91B /* PopUpImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopUpImageView.xib; path = NewsViewController/PopUpImageView.xib; sourceTree = "<group>"; };
+		3A1B7A521DE7DD07001CB91B /* PopUpImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopUpImageView.h; path = NewsViewController/PopUpImageView.h; sourceTree = "<group>"; };
+		3A1B7A531DE7DD07001CB91B /* PopUpImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopUpImageView.m; path = NewsViewController/PopUpImageView.m; sourceTree = "<group>"; };
+		3A1B7A551DE7E074001CB91B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3A1B7A571DE7E07C001CB91B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3A1B7A5A1DE8330D001CB91B /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spec.swift; path = Model/Spec.swift; sourceTree = "<group>"; };
+		3A1B7A5C1DE83436001CB91B /* SelectOnlineViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectOnlineViewControllerTableViewCell.swift; path = ServiceOnline/SelectOnlineViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		3A55501E1DCC7299007B4E21 /* SeclectDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeclectDepartmentViewController.swift; path = SelectDepartment/SeclectDepartmentViewController.swift; sourceTree = "<group>"; };
 		3A5550201DCC7BF2007B4E21 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Controller/APIManager.swift; sourceTree = "<group>"; };
 		3A5550221DCC8289007B4E21 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectOnlineViewController.swift; path = ServiceOnline/SelectOnlineViewController.swift; sourceTree = "<group>"; };
+		3A57FA601DE684B100BE5596 /* EncodeBase64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EncodeBase64.swift; path = "Encode base64/EncodeBase64.swift"; sourceTree = "<group>"; };
+		3A57FA621DE6C54C00BE5596 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = Model/Question.swift; sourceTree = "<group>"; };
+		3A73DA571DEE823B0040EF88 /* SelectDoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectDoctorTableViewCell.swift; path = ServiceOnline/SelectDoctorTableViewCell.swift; sourceTree = "<group>"; };
+		3A73DA591DEE860E0040EF88 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Doctor.swift; path = Model/Doctor.swift; sourceTree = "<group>"; };
 		3A771D7E1DDD49D000634FB3 /* APIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIError.h; path = "Controller/Lib Error/APIError.h"; sourceTree = "<group>"; };
 		3A771D7F1DDD49D000634FB3 /* APIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIError.m; path = "Controller/Lib Error/APIError.m"; sourceTree = "<group>"; };
 		3A771D841DDD550C00634FB3 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIHelper.swift; path = "Controller/Lib Error/APIHelper.swift"; sourceTree = "<group>"; };
@@ -108,17 +129,12 @@
 		6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneHealthApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842C3F581DE3DCF30027ABA7 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoTableViewCell.swift; path = InfoViewController/InfoTableViewCell.swift; sourceTree = "<group>"; };
 		84329DC31DE0042A004F4C6F /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveViewController.swift; path = "Login:Register/ActiveViewController.swift"; sourceTree = "<group>"; };
-		84496B391DE5480C002A56F4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		84496B3A1DE5480C002A56F4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		84496B3C1DE5480C002A56F4 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		84516A3F1DDAE7EA00921DCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Login:Register/LoginViewController.swift"; sourceTree = "<group>"; };
 		847B58BF1DDEB286008A35F5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		847B58C01DDEB286008A35F5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		84D960AB1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = NewsViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
-		84D960AC1DE2D7AE00BB3AC8 /* NewsTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTabViewController.swift; path = NewsViewController/NewsTabViewController.swift; sourceTree = "<group>"; };
-		84D960AD1DE2D7AE00BB3AC8 /* QuestionTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTabTableViewCell.swift; path = NewsViewController/QuestionTabTableViewCell.swift; sourceTree = "<group>"; };
-		84D960AE1DE2D7AE00BB3AC8 /* QuestionTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTabViewController.swift; path = NewsViewController/QuestionTabViewController.swift; sourceTree = "<group>"; };
 		84E122911DE42AF500AB9BFF /* AddQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddQuestionViewController.swift; path = NewsViewController/AddQuestionViewController.swift; sourceTree = "<group>"; };
 		84E6CC661DE2CD2A00F883A3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		84ED8B8C1DDED22D008B9EDF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = NotificationViewController/NotificationViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1B7A581DE7E07C001CB91B /* SystemConfiguration.framework in Frameworks */,
+				3A1B7A561DE7E074001CB91B /* QuartzCore.framework in Frameworks */,
 				3A83C98A1DD059D4000329D3 /* MapKit.framework in Frameworks */,
 				3A83C9881DD05981000329D3 /* CoreLocation.framework in Frameworks */,
 				EC154BC17C2FC8DC1D887677 /* libPods-OneHealthApp.a in Frameworks */,
@@ -154,6 +172,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1B7A3F1DE7CBFA001CB91B /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				3A1B7A401DE7CBFA001CB91B /* Camera.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3A1B7A421DE7D93D001CB91B /* BasePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				3A1B7A431DE7D93D001CB91B /* BasePopupView.h */,
+				3A1B7A441DE7D93D001CB91B /* BasePopupView.m */,
+			);
+			path = BasePopUp;
+			sourceTree = "<group>";
+		};
+		3A57FA5F1DE6847400BE5596 /* Encode base64 */ = {
+			isa = PBXGroup;
+			children = (
+				3A57FA601DE684B100BE5596 /* EncodeBase64.swift */,
+			);
+			name = "Encode base64";
+			sourceTree = "<group>";
+		};
 		3A771D771DDD425900634FB3 /* Lib Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +210,9 @@
 		3A7A0A441DDC06D00088C267 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3A1B7A421DE7D93D001CB91B /* BasePopUp */,
+				3A1B7A3F1DE7CBFA001CB91B /* Camera */,
+				3A57FA5F1DE6847400BE5596 /* Encode base64 */,
 				84496B381DE5480C002A56F4 /* MBProgressHUD */,
 				84E6CC651DE2CD2A00F883A3 /* CheckBox */,
 				847B58BE1DDEB286008A35F5 /* Utils */,
@@ -187,6 +233,8 @@
 		3A83C9861DD05981000329D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A1B7A571DE7E07C001CB91B /* SystemConfiguration.framework */,
+				3A1B7A551DE7E074001CB91B /* QuartzCore.framework */,
 				3A83C9891DD059D4000329D3 /* MapKit.framework */,
 				3A83C9871DD05981000329D3 /* CoreLocation.framework */,
 				6B9A8401B08FD0090D55E6E5 /* libPods-OneHealthApp.a */,
@@ -264,6 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				3A5550221DCC8289007B4E21 /* User.swift */,
+				3A57FA621DE6C54C00BE5596 /* Question.swift */,
+				3A1B7A5A1DE8330D001CB91B /* Spec.swift */,
+				3A73DA591DEE860E0040EF88 /* Doctor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -317,7 +368,9 @@
 			isa = PBXGroup;
 			children = (
 				3A5550241DCC84B9007B4E21 /* SelectOnlineViewController.swift */,
+				3A1B7A5C1DE83436001CB91B /* SelectOnlineViewControllerTableViewCell.swift */,
 				3A83C9821DD02DBE000329D3 /* SelectDoctorViewController.swift */,
+				3A73DA571DEE823B0040EF88 /* SelectDoctorTableViewCell.swift */,
 				3A83C9841DD03737000329D3 /* DetailDoctorViewController.swift */,
 				3A7A0A4E1DDC4A510088C267 /* ChatViewController.swift */,
 			);
@@ -337,10 +390,10 @@
 			children = (
 				3ACFBD201DCD940D00157D97 /* NewsViewController.swift */,
 				84D960AB1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift */,
-				84D960AC1DE2D7AE00BB3AC8 /* NewsTabViewController.swift */,
-				84D960AD1DE2D7AE00BB3AC8 /* QuestionTabTableViewCell.swift */,
-				84D960AE1DE2D7AE00BB3AC8 /* QuestionTabViewController.swift */,
 				84E122911DE42AF500AB9BFF /* AddQuestionViewController.swift */,
+				3A1B7A521DE7DD07001CB91B /* PopUpImageView.h */,
+				3A1B7A531DE7DD07001CB91B /* PopUpImageView.m */,
+				3A1B7A4D1DE7DA1C001CB91B /* PopUpImageView.xib */,
 			);
 			name = NewsViewController;
 			sourceTree = "<group>";
@@ -382,10 +435,8 @@
 		84496B381DE5480C002A56F4 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				84496B391DE5480C002A56F4 /* LICENSE */,
 				84496B3A1DE5480C002A56F4 /* MBProgressHUD.h */,
 				84496B3B1DE5480C002A56F4 /* MBProgressHUD.m */,
-				84496B3C1DE5480C002A56F4 /* README.mdown */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -473,7 +524,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = OneHealth;
 				TargetAttributes = {
 					3A8E54BB1DCC1A730059EA2A = {
@@ -518,9 +569,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1B7A4F1DE7DA1C001CB91B /* PopUpImageView.xib in Resources */,
 				3A8E54CA1DCC1A750059EA2A /* LaunchScreen.storyboard in Resources */,
 				3A8E54C71DCC1A750059EA2A /* Assets.xcassets in Resources */,
-				84496B3D1DE5480C002A56F4 /* LICENSE in Resources */,
 				3A8E54C51DCC1A750059EA2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,17 +645,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1B7A591DE82044001CB91B /* ServiceMedicalExaminationViewController.swift in Sources */,
+				3A1B7A501DE7DBB2001CB91B /* BasePopupView.m in Sources */,
 				3A55501F1DCC7299007B4E21 /* SeclectDepartmentViewController.swift in Sources */,
+				3A57FA631DE6C54C00BE5596 /* Question.swift in Sources */,
 				3A7A0A4A1DDC0E2D0088C267 /* RearViewController.swift in Sources */,
 				842C3F591DE3DCF30027ABA7 /* InfoTableViewCell.swift in Sources */,
 				84496B3E1DE5480C002A56F4 /* MBProgressHUD.m in Sources */,
 				84ED8B8D1DDED22D008B9EDF /* NotificationViewController.swift in Sources */,
 				3A7A0A511DDC5BAE0088C267 /* UserController.swift in Sources */,
 				84D960AF1DE2D7AE00BB3AC8 /* NewsTableViewCell.swift in Sources */,
-				84D960B01DE2D7AE00BB3AC8 /* NewsTabViewController.swift in Sources */,
 				3A771D851DDD550C00634FB3 /* APIHelper.swift in Sources */,
-				84D960B11DE2D7AE00BB3AC8 /* QuestionTabTableViewCell.swift in Sources */,
+				3A57FA611DE684B100BE5596 /* EncodeBase64.swift in Sources */,
+				3A73DA5A1DEE860E0040EF88 /* Doctor.swift in Sources */,
 				3A8E54F71DCC2A9D0059EA2A /* ServiceViewController.swift in Sources */,
+				3A1B7A541DE7DD07001CB91B /* PopUpImageView.m in Sources */,
+				3A1B7A411DE7CBFA001CB91B /* Camera.swift in Sources */,
 				84329DC41DE0042A004F4C6F /* ActiveViewController.swift in Sources */,
 				3A7A0A4D1DDC3ABF0088C267 /* InfoViewController.swift in Sources */,
 				84516A401DDAE7EA00921DCA /* LoginViewController.swift in Sources */,
@@ -613,20 +669,20 @@
 				3A5550251DCC84B9007B4E21 /* SelectOnlineViewController.swift in Sources */,
 				84E6CC671DE2CD2A00F883A3 /* CheckBox.swift in Sources */,
 				3A83C9831DD02DBE000329D3 /* SelectDoctorViewController.swift in Sources */,
-				84D960B21DE2D7AE00BB3AC8 /* QuestionTabViewController.swift in Sources */,
-				3AC6644A1DCC62950001F8A5 /* ServiceMedicalExaminationViewController.swift in Sources */,
 				3A7A0A4F1DDC4A510088C267 /* ChatViewController.swift in Sources */,
 				3A5550231DCC8289007B4E21 /* User.swift in Sources */,
 				3A8E54F91DCC314D0059EA2A /* ServiceTableViewCell.swift in Sources */,
-				84496B3F1DE5480C002A56F4 /* README.mdown in Sources */,
 				3A7A0A481DDC07B90088C267 /* SWRevealViewController.m in Sources */,
+				3A1B7A5D1DE83436001CB91B /* SelectOnlineViewControllerTableViewCell.swift in Sources */,
 				3A771D821DDD49D000634FB3 /* APIError.m in Sources */,
 				84E122921DE42AF500AB9BFF /* AddQuestionViewController.swift in Sources */,
 				3A7A0A431DDBF4FD0088C267 /* RegisterViewController.swift in Sources */,
 				3A8E54F31DCC1BCB0059EA2A /* AppDelegate.swift in Sources */,
+				3A1B7A5B1DE8330D001CB91B /* Spec.swift in Sources */,
 				3A5550211DCC7BF2007B4E21 /* APIManager.swift in Sources */,
 				847B58C11DDEB286008A35F5 /* Utils.m in Sources */,
 				3A83C9851DD03737000329D3 /* DetailDoctorViewController.swift in Sources */,
+				3A73DA581DEE823B0040EF88 /* SelectDoctorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +755,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -749,6 +806,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -779,10 +837,13 @@
 			baseConfigurationReference = CEB1D989124276CD3285ED41 /* Pods-OneHealthApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XXU9UNW2WU;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = anhviet.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneHealthApp/OneHealthApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -794,10 +855,13 @@
 			baseConfigurationReference = C470E1E5D0211B45B540ABA2 /* Pods-OneHealthApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XXU9UNW2WU;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OneHealthApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lampham.OneHealth.OneHealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = anhviet.OneHealth.OneHealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneHealthApp/OneHealthApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

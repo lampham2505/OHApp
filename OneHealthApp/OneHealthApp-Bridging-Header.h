@@ -18,6 +18,7 @@
 #import "APIError.h"
 #import "Utils.h"
 #import "MBProgressHUD.h"
+#import "PopUpImageView.h"
 #define status_code_failed 0
 #define status_code_success 1
 #define status_code_token -1
@@ -26,4 +27,6 @@
 #define key_status_error "EMStatusCode"
 #define key_status_message "Message"
 #define key_status_list "List"
+#define keyUser "User"
+#define limitItem "10"
 #endif /* OneHealthApp_Bridging_Header_h */
